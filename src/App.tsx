@@ -218,11 +218,23 @@ function ImagePlaceholder({ aspectRatio = '4/5' }: { aspectRatio?: string }) {
 function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) => void }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
+  // Track window resizing natively to ensure perfect layout control
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
+    const onResize = () => setIsMobile(window.innerWidth < 768)
+    
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('resize', onResize)
+    
+    // Initial check
+    onResize()
+    
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onResize)
+    }
   }, [])
 
   const navLinks: { label: string; page: Page }[] = [
@@ -255,13 +267,13 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
         <div style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 32px',
+          padding: '0 24px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           height: '68px',
         }}>
-          {/* Logo */}
+          {/* Logo Name Link (with nowrap protection) */}
           <button
             onClick={() => handleNav('home')}
             style={{
@@ -270,6 +282,11 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
               color: C.text,
               letterSpacing: '-0.02em',
               transition: 'color 0.2s ease',
+              whiteSpace: 'nowrap',
+              backgroundColor: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
             }}
             onMouseEnter={e => (e.currentTarget.style.color = C.emeraldBright)}
             onMouseLeave={e => (e.currentTarget.style.color = C.text)}
@@ -277,9 +294,12 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
             IK Aminu
           </button>
 
-          {/* Desktop links */}
-          <div style={{ display: 'flex', gap: '36px', alignItems: 'center' }}
-            className="hidden md:flex">
+          {/* Desktop Navigation Links */}
+          <div style={{ 
+            display: isMobile ? 'none' : 'flex', 
+            gap: '36px', 
+            alignItems: 'center' 
+          }}>
             {navLinks.map(({ label, page }) => (
               <button
                 key={page}
@@ -292,6 +312,9 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
                   textTransform: 'uppercase',
                   color: currentPage === page ? C.emeraldBright : C.muted,
                   transition: 'color 0.2s ease',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  cursor: 'pointer',
                 }}
                 onMouseEnter={e => { if (currentPage !== page) e.currentTarget.style.color = C.text }}
                 onMouseLeave={e => { if (currentPage !== page) e.currentTarget.style.color = C.muted }}
@@ -301,14 +324,17 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
             ))}
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile Hamburger Menu Toggle Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex md:hidden"
             style={{
+              display: isMobile ? 'flex' : 'none',
               flexDirection: 'column',
               gap: '5px',
-              padding: '4px',
+              padding: '8px',
+              backgroundColor: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
             }}
           >
             {[0, 1, 2].map(i => (
@@ -327,15 +353,16 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
           </button>
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
+        {/* Mobile Dropdown Drawer Menu */}
+        {isMobile && mobileOpen && (
           <div style={{
             backgroundColor: '#0d0d0d',
             borderTop: `1px solid ${C.border}`,
-            padding: '24px 32px',
-          }}
-            className="flex md:hidden flex-col gap-5"
-          >
+            padding: '24px 24px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '20px',
+          }}>
             {navLinks.map(({ label, page }) => (
               <button
                 key={page}
@@ -348,6 +375,10 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
                   textTransform: 'uppercase',
                   color: currentPage === page ? C.emeraldBright : C.muted,
                   textAlign: 'left',
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  width: '100%',
+                  padding: '4px 0',
                 }}
               >
                 {label}
@@ -359,7 +390,6 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
     </>
   )
 }
-
 // ── Home Page ─────────────────────────────────────────────────────────────────
 
 function HomePage({ setPage }: { setPage: (p: Page) => void }) {
