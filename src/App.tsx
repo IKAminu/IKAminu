@@ -371,12 +371,11 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr',
           gap: '64px',
           width: '100%',
           alignItems: 'center',
         }}
-          className="md:grid-cols-[55fr_45fr]"
+          className="grid-cols-1 md:grid-cols-[55fr_45fr]"
         >
           {/* Left */}
           <div>
@@ -465,8 +464,8 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             </div>
           </div>
 
-         {/* Right: portrait image */}
-          <div className="anim-fade-up-delay-2 hidden md:block">
+          {/* Right: portrait image */}
+          <div className="anim-fade-up-delay-2 w-full max-w-md mx-auto md:max-w-none">
             <div style={{ position: 'relative', width: '100%', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '8px' }}>
               <img
                 src={portraitImg} 
@@ -481,7 +480,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
       </section>
-
+      
       <Rule />
 
       {/* About preview */}
