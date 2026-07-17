@@ -959,14 +959,6 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer style={{ borderTop: `1px solid ${C.border}`, padding: '32px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}> © 2026 IK Aminu </span>
-          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>Engineering Competence Through Systems.</span>
-        </div>
-      </footer>
     </div>
   )
 }
