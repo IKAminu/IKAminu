@@ -846,6 +846,18 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             >
               Instagram
             </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/share/18Y7h7ybNH/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              Facebook
+            </a>
           </div>
         </div>
       </section>
@@ -853,7 +865,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       {/* Footer */}
       <footer style={{ borderTop: `1px solid ${C.border}`, padding: '32px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>© 2026 IK Aminu</span>
+          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}> © 2026 IK Aminu </span>
           <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>Engineering Competence Through Systems.</span>
         </div>
       </footer>
@@ -881,7 +893,8 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
           IK Aminu
         </h1>
 
-        <div style={{ display: 'grid', gap: '80px', alignItems: 'start' }} className="md:grid-cols-[300px_1fr]">
+        {/* ── SECTION ONE: Father's Story ── */}
+        <div style={{ display: 'grid', gap: '80px', alignItems: 'start', marginBottom: '80px' }} className="grid-cols-1 md:grid-cols-[300px_1fr]">
           <div>
             <ImagePlaceholder aspectRatio="3/4" />
             <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -904,18 +917,50 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               build a travel company after decades in aviation.
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
-              He didn't build it by accident. He built it by applying everything he had learned
-              about precision, reliability, and systems — the same principles that kept aircraft
-              airborne — to the messy, human terrain of commerce. That was my first real education
-              in what business actually is: a set of systems, designed by people, run by people,
-              and ultimately failing or succeeding based on the quality of those systems.
+              He didn't build it by accident, rather by applying everything he had learned
+              about precision, reliability, and systems, the same principles that kept aircraft
+              airborne; when he was Regional Manager, UK, in Nigerian Airways; when he was Executive Director Kabo Air; 
+              When he was MD/CEO Savannah air and other such airlines; to the messy, 
+              human terrain of commerce in his later endeavors. 
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
+              What fascinated me wasn't simply the titles he held, but the mindset behind them. Aviation is an industry that 
+              has absolutely no tolerance for disorder. Aircraft don't stay in the sky because people hope they will. They stay 
+              there because thousands of carefully designed systems, procedures, checklists, and professionals work together 
+              with extraordinary precision. Reliability isn't optional. Small mistakes compound. Details matter. Looking back, 
+              I realize those principles never left him. When he transitioned into entrepreneurship and founded a travel company 
+              specializing in Hajj, Umrah, and international travel services, he wasn't starting from scratch. He was translating 
+              decades of operational discipline into an entirely different environment. The same habits that keep aircraft operating 
+              safely and efficiently; clear processes, accountability, preparation, consistency, and trust, became 
+              the foundation of the business he built.
+            </p>
+            <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
+              That was my first real education
+              in what business actually is: a set of systems, designed by people, run by people,
+              and ultimately failing or succeeding based on the quality of those systems.
               I've carried that framing into everything I've built since. Business problems are
-              systems problems. Not people problems, not market problems — systems problems. When
+              systems problems. Not people problems, not market problems. systems problems. When
               an organization struggles to grow, the fix isn't always a new hire or a bigger budget.
               Often it's a missing process, an unresolved ambiguity, or a feedback loop that never
               got built.
+            </p>
+          </div>
+        </div>
+
+        {/* ── SECTION TWO: Your Agency Journey & Collage ── */}
+        <div style={{ display: 'grid', gap: '80px', alignItems: 'center', marginBottom: '48px' }} className="grid-cols-1 md:grid-cols-[1fr_1fr]">
+          {/* Left Side: Your Text */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+            <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
+              I didn't appreciate any of this growing up. Like most children, I saw the outcomes long before I 
+              understood the systems producing them. Only years later, after building my own agency, making expensive 
+              mistakes, managing clients, hiring people, and struggling with growth, did I realize I had been receiving an 
+              education all along. My father never explicitly taught me that businesses are systems, but his career 
+              demonstrated it every day. That realization permanently changed how I think about entrepreneurship. Today, 
+              when I design websites, build automations, structure marketing campaigns, or create operational workflows, 
+              I'm rarely thinking only about the immediate task. I'm thinking about the system behind it. Because I've come 
+              to believe that businesses don't rise or fall primarily because of ideas or effort. They rise or fall because 
+              of the quality of the systems the people inside them choose to build.
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
               I founded Web4 with a simple conviction: that most businesses have more growth
@@ -928,47 +973,70 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               of putting a principle into writing tests whether it's actually a principle, or just
               a preference. Everything I publish here has passed that test.
             </p>
-
             <div style={{ borderLeft: `2px solid ${C.emerald}`, paddingLeft: '24px', marginTop: '16px' }}>
               <p style={{ fontFamily: F.display, fontSize: '20px', fontWeight: 400, lineHeight: 1.5, color: C.text, fontStyle: 'italic', letterSpacing: '-0.01em' }}>
                 "The long game requires patience with the process and impatience with the result.
                 I try to hold both."
               </p>
             </div>
+          </div>
 
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '16px' }}>
-              <button
-                onClick={() => setPage('writing')}
-                style={{
-                  fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
-                  color: C.text, padding: '12px 24px', border: `1px solid ${C.borderMid}`,
-                  transition: 'border-color 0.2s ease, color 0.2s ease',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = C.emeraldBright; e.currentTarget.style.color = C.emeraldBright }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = C.borderMid; e.currentTarget.style.color = C.text }}
-              >
-                Read My Writing
-              </button>
-              <button
-                onClick={() => setPage('web4')}
-                style={{
-                  fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
-                  color: C.text, padding: '12px 24px', backgroundColor: C.emerald,
-                  transition: 'background-color 0.2s ease',
-                }}
-                onMouseEnter={e => e.currentTarget.style.backgroundColor = C.emeraldBright}
-                onMouseLeave={e => e.currentTarget.style.backgroundColor = C.emerald}
-              >
-                Explore Web4
-              </button>
+          {/* Right Side: Dynamic Collage Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', width: '100%' }}>
+            {/* Top Left: Vertical 1 */}
+            <div style={{ aspectRatio: '3/4', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Vertical 1</div>
+            </div>
+            
+            {/* Top Right: Horizontal 1 */}
+            <div style={{ aspectRatio: '4/3', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden', alignSelf: 'start' }}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Horizontal 1</div>
+            </div>
+
+            {/* Bottom Left: Horizontal 2 */}
+            <div style={{ aspectRatio: '4/3', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Horizontal 2</div>
+            </div>
+
+            {/* Bottom Right: Vertical 2 */}
+            <div style={{ aspectRatio: '3/4', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden', marginTop: '-25%' }}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Vertical 2</div>
             </div>
           </div>
         </div>
+
+        {/* ── SECTION THREE: Action Buttons ── */}
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'flex-start' }}>
+          <button
+            onClick={() => setPage('writing')}
+            style={{
+              fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
+              color: C.text, padding: '12px 24px', border: `1px solid ${C.borderMid}`,
+              transition: 'border-color 0.2s ease, color 0.2s ease',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = C.emeraldBright; e.currentTarget.style.color = C.emeraldBright }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = C.borderMid; e.currentTarget.style.color = C.text }}
+          >
+            Read My Writing
+          </button>
+          <button
+            onClick={() => setPage('web4')}
+            style={{
+              fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
+              color: C.text, padding: '12px 24px', backgroundColor: C.emerald,
+              transition: 'background-color 0.2s ease',
+            }}
+            onMouseEnter={e => e.currentTarget.style.backgroundColor = C.emeraldBright}
+            onMouseLeave={e => e.currentTarget.style.backgroundColor = C.emerald}
+          >
+            Explore Web4
+          </button>
+        </div>
+
       </div>
     </div>
   )
 }
-
 // ── Writing Page ──────────────────────────────────────────────────────────────
 
 function WritingPage() {
