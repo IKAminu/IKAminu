@@ -108,7 +108,7 @@ const PRINCIPLES = [
     title: "Competence is engineered, not improvised.",
     body: "Consistent excellence is the result of deliberate system design — feedback loops, constraints, and intentional practice — not raw talent or luck.",
   },
-]
+ ]
 
 const WEB4_SERVICES = [
   {
@@ -467,14 +467,15 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
          {/* Right: portrait image */}
           <div className="anim-fade-up-delay-2 hidden md:block">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
-              <Image
-                src="/portrait.png" 
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '8px' }}>
+              <img
+                src={portraitImg} 
                 alt="Portrait" 
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
               />
             </div>
           </div>
