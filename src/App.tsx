@@ -454,6 +454,7 @@ function Footer() {
     </footer>
   )
 }
+
 // ── Home Page ─────────────────────────────────────────────────────────────────
 
 function HomePage({ setPage }: { setPage: (p: Page) => void }) {
