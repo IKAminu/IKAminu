@@ -801,7 +801,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           <div style={{ display: 'flex', gap: '28px', marginTop: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
             {/* WhatsApp */}
             <a
-              href="https://wa.me/234XXXXXXXXXX" 
+              href="https://wa.me/2347017190683" 
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
@@ -813,7 +813,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/YOUR_USERNAME"
+              href="https://linkedin.com/in/IKaminu"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
@@ -825,7 +825,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
             {/* X (Twitter) */}
             <a
-              href="https://x.com/YOUR_USERNAME"
+              href="https://x.com/IKAMINU"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
@@ -837,7 +837,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/YOUR_USERNAME"
+              href="https://instagram.com/ikaminu_"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
