@@ -5,6 +5,7 @@ import verticalImg from './vertical.png';
 import horizontalImg from './horizontal.png';
 import vertical1Img from './vertical1.png';
 import horizontal1Img from './horizontal1.png';
+import img5Img from './img5.png';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -898,23 +899,69 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
           IK Aminu
         </h1>
 
-        {/* ── SECTION ONE: Father's Story ── */}
-        <div style={{ display: 'grid', gap: '80px', alignItems: 'start', marginBottom: '80px' }} className="grid-cols-1 md:grid-cols-[300px_1fr]">
-          <div>
-            <ImagePlaceholder aspectRatio="3/4" />
-            <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        {/* ── SECTION ONE: Dad's mention*/}
+        {/* Custom Image Wrapper with Hover Controls */}
+            <div 
+              style={{
+                width: '100%',
+                aspectRatio: '3/4',
+                position: 'relative',
+                border: '1px solid rgba(14, 102, 73, 0.3)',
+                borderRadius: '4px',
+                overflow: 'hidden',
+              }}
+              className="group"
+            >
+              {/* Permanent Main Image */}
+              <img 
+                src={img5Img} 
+                alt="IK Aminu" 
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+
+              {/* Hover Overlay: Dark Green Tint & Text Display */}
+              <div 
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  backgroundColor: '#0c160f',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  transition: 'opacity 0.3s ease',
+                }}
+                className="opacity-0 group-hover:opacity-90"
+              >
+                <div style={{ width: '32px', height: '1px', backgroundColor: 'rgba(14, 102, 73, 0.6)' }} />
+                <span style={{
+                  fontFamily: F.body,
+                  fontSize: '11px',
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  color: C.emeraldBright,
+                  fontWeight: 500,
+                }}>
+                  2026
+                </span>
+                <div style={{ width: '32px', height: '1px', backgroundColor: 'rgba(14, 102, 73, 0.6)' }} />
+              </div>
+
+              {/* Permanent Thiuck Corners */}
               {[
-                { label: 'Company', value: 'Web4' },
-                { label: 'Focus', value: 'Business Systems' },
-                { label: 'Location', value: 'Nigeria' },
-              ].map(({ label, value }) => (
-                <div key={label} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: `1px solid ${C.border}`, paddingBottom: '12px' }}>
-                  <span style={{ fontFamily: F.body, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: C.muted }}>{label}</span>
-                  <span style={{ fontFamily: F.body, fontSize: '13px', color: C.mutedLight }}>{value}</span>
-                </div>
+                { top: -1, left: -1, borderTop: `2px solid ${C.emerald}`, borderLeft: `2px solid ${C.emerald}` },
+                { top: -1, right: -1, borderTop: `2px solid ${C.emerald}`, borderRight: `2px solid ${C.emerald}` },
+                { bottom: -1, left: -1, borderBottom: `2px solid ${C.emerald}`, borderLeft: `2px solid ${C.emerald}` },
+                { bottom: -1, right: -1, borderBottom: `2px solid ${C.emerald}`, borderRight: `2px solid ${C.emerald}` },
+              ].map((style, i) => (
+                <div key={i} style={{ position: 'absolute', width: 16, height: 16, ...style, pointerEvents: 'none' }} />
               ))}
             </div>
-          </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             <p style={{ fontFamily: F.display, fontSize: 'clamp(20px, 2.2vw, 26px)', fontWeight: 400, lineHeight: 1.55, color: C.text, letterSpacing: '-0.01em' }}>
