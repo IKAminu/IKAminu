@@ -880,8 +880,6 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
 // ── About Page ────────────────────────────────────────────────────────────────
 
-// ── About Page ────────────────────────────────────────────────────────────────
-
 function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
@@ -900,7 +898,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
           IK Aminu
         </h1>
 
-        {/* ── SECTION ONE: Father's Story ── */}
+        {/* ── SECTION ONE: Dad's mention ── */}
         <div style={{ display: 'grid', gap: '80px', alignItems: 'start', marginBottom: '80px' }} className="grid-cols-1 md:grid-cols-[300px_1fr]">
           
           {/* Left Side: Image & Meta Items */}
@@ -917,7 +915,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               }}
               className="group"
             >
-              {/* Permanent Main Image */}
+              {/*Main Image */}
               <img 
                 src={img5Img} 
                 alt="IK Aminu" 
@@ -928,7 +926,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
                 }}
               />
 
-              {/* Hover Overlay: Dark Green Tint & Text Display */}
+              {/* Hover Overlay*/}
               <div 
                 style={{
                   position: 'absolute',
@@ -957,7 +955,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
                 <div style={{ width: '32px', height: '1px', backgroundColor: 'rgba(14, 102, 73, 0.6)' }} />
               </div>
 
-              {/* Permanent Thick Corners */}
+              {/*Corners */}
               {[
                 { top: -1, left: -1, borderTop: `2px solid ${C.emerald}`, borderLeft: `2px solid ${C.emerald}` },
                 { top: -1, right: -1, borderTop: `2px solid ${C.emerald}`, borderRight: `2px solid ${C.emerald}` },
@@ -1020,7 +1018,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
 
-        {/* ── SECTION TWO: Your Agency Journey & Collage ── */}
+        {/* ── SECTION TWO: WEB4 & Collage ── */}
         <div style={{ display: 'grid', gap: '80px', alignItems: 'center', marginBottom: '48px' }} className="grid-cols-1 md:grid-cols-[1fr_1fr]">
           {/* Text on the left */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
@@ -1144,11 +1142,11 @@ function WritingPage() {
           color: C.text,
           marginBottom: '24px',
         }}>
-          Essays on Systems,<br />
+          Essays on Systems, psychology, <br />
           <em style={{ fontStyle: 'italic', color: C.emeraldBright }}>Business & Competence.</em>
         </h1>
         <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, maxWidth: '560px', lineHeight: 1.7, marginBottom: '80px' }}>
-          These are not opinion pieces. They are working principles — tested through experience,
+          These are not opinion pieces. They are working principles, tested everyday,
           refined through practice, published to hold myself accountable.
         </p>
 
@@ -1257,7 +1255,7 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
             <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
               A system that transforms unsafe cybersecurity habits into measurable, repeatable
               behaviors through automation and continuous monitoring. Built on the premise that
-              most security failures are behavioral — not technical.
+              most security failures are behavioral, not technical.
             </p>
           </div>
           <div style={{ padding: '48px 56px' }}>
@@ -1333,8 +1331,8 @@ function Web4Page() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '24px' }}>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, lineHeight: 1.8 }}>
-              We don't sell tactics. We engineer the infrastructure for sustained, measurable growth —
-              connecting brand, marketing, technology, and AI into a coherent system that compounds
+              We don't sell tactics. We engineer the infrastructure for sustained, measurable growth;
+              connecting brand, marketing, technology, strategy and AI into a coherent system that compounds
               over time.
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, lineHeight: 1.8 }}>
@@ -1389,7 +1387,7 @@ function Web4Page() {
             We work with a small number of clients at a time. Reach out to start the conversation.
           </p>
           <a
-            href="mailto:ik@web4.com"
+            href="mailto:ikaminumail@gmail.com"
             style={{
               fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
               color: C.text, padding: '14px 32px', backgroundColor: C.emerald,
@@ -1417,7 +1415,7 @@ function PrinciplesPage() {
           How I Think.
         </h1>
         <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, maxWidth: '560px', lineHeight: 1.75, marginBottom: '80px' }}>
-          These are operating principles — not aspirations. They govern decisions, shape priorities,
+          These are some of my operating principles, not just aspirations. They govern decisions, shape priorities,
           and get tested every time something goes wrong.
         </p>
 
@@ -1503,7 +1501,7 @@ function NowPage() {
 
             <div style={{ marginTop: '64px', padding: '40px', backgroundColor: '#0c160f', border: `1px solid rgba(14, 102, 73, 0.2)` }}>
               <p style={{ fontFamily: F.display, fontSize: '20px', fontWeight: 400, lineHeight: 1.55, color: C.text, fontStyle: 'italic', letterSpacing: '-0.01em' }}>
-                "The holding company is the long game. Every company, essay, and system I build today
+                "Every company, essay, and system I build today
                 is a brick in a structure I expect to be standing in thirty years."
               </p>
               <p style={{ fontFamily: F.body, fontSize: '13px', color: C.muted, marginTop: '20px' }}>— IK Aminu</p>
