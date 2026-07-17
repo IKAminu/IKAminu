@@ -899,8 +899,12 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
           IK Aminu
         </h1>
 
-        {/* ── SECTION ONE: Dad's mention*/}
-        {/* Custom Image Wrapper with Hover Controls */}
+        {/* ── SECTION ONE: Father's Story ── */}
+        <div style={{ display: 'grid', gap: '80px', alignItems: 'start', marginBottom: '80px' }} className="grid-cols-1 md:grid-cols-[300px_1fr]">
+          
+          {/* Left Side: Image & Meta Items */}
+          <div>
+            {/* Custom Image Wrapper with Hover Controls */}
             <div 
               style={{
                 width: '100%',
@@ -952,7 +956,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
                 <div style={{ width: '32px', height: '1px', backgroundColor: 'rgba(14, 102, 73, 0.6)' }} />
               </div>
 
-              {/* Permanent Thiuck Corners */}
+              {/* Permanent Thick Corners */}
               {[
                 { top: -1, left: -1, borderTop: `2px solid ${C.emerald}`, borderLeft: `2px solid ${C.emerald}` },
                 { top: -1, right: -1, borderTop: `2px solid ${C.emerald}`, borderRight: `2px solid ${C.emerald}` },
@@ -963,6 +967,22 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               ))}
             </div>
 
+            {/* Meta Table Items directly underneath image */}
+            <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {[
+                { label: 'Company', value: 'Web4' },
+                { label: 'Focus', value: 'Business Systems' },
+                { label: 'Location', value: 'Nigeria' },
+              ].map(({ label, value }) => (
+                <div key={label} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: `1px solid ${C.border}`, paddingBottom: '12px' }}>
+                  <span style={{ fontFamily: F.body, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: C.muted }}>{label}</span>
+                  <span style={{ fontFamily: F.body, fontSize: '13px', color: C.mutedLight }}>{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Side: Narrative Text */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             <p style={{ fontFamily: F.display, fontSize: 'clamp(20px, 2.2vw, 26px)', fontWeight: 400, lineHeight: 1.55, color: C.text, letterSpacing: '-0.01em' }}>
               My understanding of business didn't begin in a startup. It began watching my father
@@ -997,9 +1017,10 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               got built.
             </p>
           </div>
+
         </div>
 
-        {/* ── SECTION TWO: Your Agency Journey & Collage ── */}
+        {/* ── SECTION TWO: WEB4 Agency Journey & Collage ── */}
         <div style={{ display: 'grid', gap: '80px', alignItems: 'center', marginBottom: '48px' }} className="grid-cols-1 md:grid-cols-[1fr_1fr]">
           {/* Text on the left */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
