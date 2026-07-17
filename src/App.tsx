@@ -40,7 +40,7 @@ const ARTICLES = [
     title: "Why Marketing Is Really a Systems Problem",
     date: "July 2026",
     category: "Marketing · Systems",
-    excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system — amplifying what already exists, for better or worse.",
+    excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists, for better or worse.",
     readTime: "8 min read",
     featured: true,
   },
@@ -111,7 +111,7 @@ const PRINCIPLES = [
   {
     number: "06",
     title: "Competence is engineered, not improvised.",
-    body: "Consistent excellence is the result of deliberate system design — feedback loops, constraints, and intentional practice — not raw talent or luck.",
+    body: "Consistent excellence is the result of deliberate system design; feedback loops, constraints, and intentional practice, not raw talent or luck.",
   },
  ]
 
@@ -130,7 +130,7 @@ const WEB4_SERVICES = [
   },
   {
     title: "Marketing Systems",
-    body: "End-to-end demand generation built as a repeatable system — not a series of disconnected campaigns.",
+    body: "End-to-end demand generation built as a repeatable system, not a series of disconnected campaigns.",
   },
   {
     title: "Digital Growth",
@@ -417,7 +417,7 @@ function Footer() {
           letterSpacing: '0.04em', 
           color: C.muted 
         }}>
-          © 2026 IK Aminu. Built with systems.
+          © 2026 IK Aminu.
         </span>
 
         {/* Right Side: Minimal Social Footprint Links */}
