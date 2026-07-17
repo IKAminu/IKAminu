@@ -1,16 +1,42 @@
-## Hi there 👋
+# IK Aminu
 
-<!--
-**IKAminu/IKAminu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Engineering Competence Through Systems.
 
-Here are some ideas to get you started:
+This repository contains the source code for my personal website.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm the founder of Web4, where I design systems that help businesses grow through strategy, AI, marketing, and technology.
+
+The website serves as the central home for my writing, projects, principles, and ongoing work.
+
+## Sections
+
+- About
+- Principles
+- Articles
+- Projects
+- Web4
+- Current Focus
+- Contact
+
+## Featured Writing
+
+- Competence Is Designed
+- Why Businesses Fail Because of Systems
+- Marketing Is an Operating System
+
+## Connect
+
+Instagram:
+(https://instagram.com/ikaminu_)
+
+LinkedIn:
+(https://linkedin.com/in/Ikaminu)
+
+X:
+(https://x.com/IKAMINU)
+
+Facebook:
+https://www.facebook.com/share/18Y7h7ybNH/?mibextid=wwXIfr
+
+Website:
+https://ikaminu.github.io/IKAminu/
