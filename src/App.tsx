@@ -949,13 +949,13 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
 
         {/* ── SECTION TWO: Your Agency Journey & Collage ── */}
         <div style={{ display: 'grid', gap: '80px', alignItems: 'center', marginBottom: '48px' }} className="grid-cols-1 md:grid-cols-[1fr_1fr]">
-          {/* Left Side: Your Text */}
+          {/* Text on the left */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
               I didn't appreciate any of this growing up. Like most children, I saw the outcomes long before I 
               understood the systems producing them. Only years later, after building my own agency, making expensive 
-              mistakes, managing clients, hiring people, and struggling with growth, did I realize I had been receiving an 
-              education all along. My father never explicitly taught me that businesses are systems, but his career 
+              mistakes, managing clients, working with people, and struggling with growth, did I realize I had been receiving an 
+              education all along. My father never told are systems and organisation, but his career and actions - His life
               demonstrated it every day. That realization permanently changed how I think about entrepreneurship. Today, 
               when I design websites, build automations, structure marketing campaigns, or create operational workflows, 
               I'm rarely thinking only about the immediate task. I'm thinking about the system behind it. Because I've come 
@@ -966,10 +966,10 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               I founded Web4 with a simple conviction: that most businesses have more growth
               potential than they're currently accessing, and that the gap is almost always systemic.
               We close that gap through marketing systems, AI automation, brand strategy, and
-              digital infrastructure — built deliberately, not assembled hastily.
+              digital infrastructure. Built deliberately, geared specially towards each individual system.
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
-              I also write. Not to document what I've done, but to sharpen what I think. The act
+              I also write. Not just to document what I've done, but to sharpen what I think. The act
               of putting a principle into writing tests whether it's actually a principle, or just
               a preference. Everything I publish here has passed that test.
             </p>
