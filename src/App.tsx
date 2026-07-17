@@ -40,7 +40,7 @@ const ARTICLES = [
     title: "Why Marketing Is Really a Systems Problem",
     date: "July 2026",
     category: "Marketing · Systems",
-    excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system — amplifying what already exists, for better or worse.",
+    excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists, for better or worse.",
     readTime: "8 min read",
     featured: true,
   },
@@ -96,7 +96,7 @@ const PRINCIPLES = [
   {
     number: "03",
     title: "Every recurring problem deserves a process.",
-    body: "If something goes wrong twice, it is not bad luck — it is a missing system. Document, formalize, and eliminate variance.",
+    body: "If something goes wrong twice, it is not bad luck, it is a missing system. Document, formalize, and eliminate variance.",
   },
   {
     number: "04",
@@ -111,7 +111,7 @@ const PRINCIPLES = [
   {
     number: "06",
     title: "Competence is engineered, not improvised.",
-    body: "Consistent excellence is the result of deliberate system design — feedback loops, constraints, and intentional practice — not raw talent or luck.",
+    body: "Consistent excellence is the result of deliberate system design; feedback loops, constraints, and intentional practice, not raw talent or luck.",
   },
  ]
 
@@ -130,7 +130,7 @@ const WEB4_SERVICES = [
   },
   {
     title: "Marketing Systems",
-    body: "End-to-end demand generation built as a repeatable system — not a series of disconnected campaigns.",
+    body: "End-to-end demand generation built as a repeatable system, not a series of disconnected campaigns.",
   },
   {
     title: "Digital Growth",
@@ -417,16 +417,17 @@ function Footer() {
           letterSpacing: '0.04em', 
           color: C.muted 
         }}>
-          © 2026 IK Aminu. Built with systems.
+          © 2026 IK Aminu.
         </span>
 
-        {/* Right Side: Minimal Social Footprint Links */}
+        {/* Right Side */}
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           {[
-            { label: 'WA', href: 'https://wa.me/234XXXXXXXXXX' },
-            { label: 'LN', href: 'https://linkedin.com/in/YOUR_USERNAME' },
-            { label: 'X', href: 'https://x.com/YOUR_USERNAME' },
-            { label: 'IG', href: 'https://instagram.com/YOUR_USERNAME' }
+            { label: 'WAP', href: 'https://wa.me/2347017190683' },
+            { label: 'LNK', href: 'https://linkedin.com/in/IKAminu' },
+            { label: 'X', href: 'https://x.com/IKAMINU' },
+            { label: 'INS', href: 'https://instagram.com/IKaminu_' }
+            { label: 'EML', href="mailto:ikaminumail@gmail.com" }
           ].map(({ label, href }) => (
             <a
               key={label}
@@ -959,14 +960,6 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer style={{ borderTop: `1px solid ${C.border}`, padding: '32px', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}> © 2026 IK Aminu </span>
-          <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>Engineering Competence Through Systems.</span>
-        </div>
-      </footer>
     </div>
   )
 }
