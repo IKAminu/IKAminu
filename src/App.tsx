@@ -414,7 +414,8 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             >
               Founder of Web4. I build systems that help businesses grow through strategy,
               AI, marketing, and technology. I also write about the principles behind building
-              businesses, people, and organizations that perform consistently over time.
+              businesses, people, and organizations that perform consistently over time as well as 
+              about Psychology, Philosophy and any other intrest.
             </p>
             <div className="anim-fade-up-delay-3" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
               <button
@@ -509,8 +510,8 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8, marginBottom: '32px' }}>
               That formative view of a person applying accumulated expertise to build something
-              real and lasting shaped how I think about business, leadership, and growth.
-              I've carried that lens into Web4 and every system I've built since.
+              systematic, real and lasting shaped how I think about business, leadership, and growth.
+              I've carried that lens into Web4 and every system I've built since...
             </p>
             <button
               onClick={() => setPage('about')}
@@ -764,7 +765,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
       <Rule />
 
-      {/* Contact */}
+{/* Contact */}
       <section id="contact" style={{ padding: '100px 32px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <SectionLabel>Contact</SectionLabel>
         <h2 style={{
@@ -796,26 +797,55 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           >
             ikaminumail@gmail.com
           </a>
-          <div style={{ display: 'flex', gap: '28px', marginTop: '16px' }}>
-            {['LinkedIn', 'X', 'Instagram'].map((platform) => (
-              <a
-                key={platform}
-                href="#"
-                style={{
-                  fontFamily: F.body,
-                  fontSize: '12px',
-                  fontWeight: 500,
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  color: C.muted,
-                  transition: 'color 0.2s ease',
-                }}
-                onMouseEnter={e => e.currentTarget.style.color = C.text}
-                onMouseLeave={e => e.currentTarget.style.color = C.muted}
-              >
-                {platform}
-              </a>
-            ))}
+          
+          <div style={{ display: 'flex', gap: '28px', marginTop: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/234XXXXXXXXXX" 
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              WhatsApp
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://linkedin.com/in/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              LinkedIn
+            </a>
+
+            {/* X (Twitter) */}
+            <a
+              href="https://x.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              X
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://instagram.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </section>
