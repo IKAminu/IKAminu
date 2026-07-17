@@ -39,7 +39,7 @@ const ARTICLES = [
     id: 1,
     title: "Why Marketing Is Really a Systems Problem",
     date: "July 2026",
-    category: "Marketing · Systems",
+    category: "Marketing · Systems · By IK Aminu",
     excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists, for better or worse.",
     readTime: "8 min read",
     featured: true,
@@ -48,7 +48,7 @@ const ARTICLES = [
     id: 2,
     title: "Cybersecurity Is Mostly Human Design",
     date: "June 2026",
-    category: "Cybersecurity · Systems",
+    category: "Cybersecurity · Systems · By IK Aminu",
     excerpt: "The weakest link in any security system isn't the firewall. It's the behavior pattern of the people operating within it. Security is a design problem first.",
     readTime: "6 min read",
     featured: false,
@@ -57,7 +57,7 @@ const ARTICLES = [
     id: 3,
     title: "Why Businesses Fail Because of Systems, Not People",
     date: "June 2026",
-    category: "Business · Leadership",
+    category: "Business · Leadership · By IK Aminu",
     excerpt: "We fire people when we should redesign processes. Most organizational failure is a failure of system design, not individual performance.",
     readTime: "7 min read",
     featured: false,
@@ -66,7 +66,7 @@ const ARTICLES = [
     id: 4,
     title: "Competence Is Designed",
     date: "May 2026",
-    category: "Leadership · Excellence",
+    category: "Leadership · Excellence · By IK Aminu",
     excerpt: "Consistent high performance isn't a personality trait. It's the result of systems, feedback loops, and deliberate constraints built over time.",
     readTime: "5 min read",
     featured: false,
@@ -75,7 +75,7 @@ const ARTICLES = [
     id: 5,
     title: "The Hidden Cost of Inconsistency",
     date: "May 2026",
-    category: "Business · Operations",
+    category: "Business · Operations · By IK Aminu",
     excerpt: "Inconsistency is the most expensive habit in any organization. It erodes trust, compounds errors, and makes everything harder than it needs to be.",
     readTime: "6 min read",
     featured: false,
@@ -139,7 +139,7 @@ const WEB4_SERVICES = [
 ]
 
 const NOW_ITEMS = [
-  "Building Web4 — developing client systems and internal infrastructure.",
+  "Building Web4: developing client systems and internal infrastructure.",
   "Researching AI systems for African businesses and how automation changes competitive advantage in emerging markets.",
   "Writing a series on systems thinking applied to business operations, marketing, and leadership.",
   "Laying the groundwork for a long-term holding company structure across technology, media, and services.",
@@ -1111,7 +1111,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               I didn't appreciate any of this growing up. Like most children, I saw the outcomes long before I 
               understood the systems producing them. Only years later, after building my own agency, making expensive 
               mistakes, managing clients, working with people, and struggling with growth, did I realize I had been receiving an 
-              education all along. My father never told are systems and organisation, but his career and actions - His life
+              education all along. My father never told me systems and organisation, but his career and actions - His life
               demonstrated it every day. That realization permanently changed how I think about entrepreneurship. Today, 
               when I design websites, build automations, structure marketing campaigns, or create operational workflows, 
               I'm rarely thinking only about the immediate task. I'm thinking about the system behind it. Because I've come 
