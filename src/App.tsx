@@ -881,6 +881,8 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
 // ── About Page ────────────────────────────────────────────────────────────────
 
+// ── About Page ────────────────────────────────────────────────────────────────
+
 function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
@@ -1017,10 +1019,9 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               got built.
             </p>
           </div>
-
         </div>
 
-        {/* ── SECTION TWO: WEB4 Agency Journey & Collage ── */}
+        {/* ── SECTION TWO: Your Agency Journey & Collage ── */}
         <div style={{ display: 'grid', gap: '80px', alignItems: 'center', marginBottom: '48px' }} className="grid-cols-1 md:grid-cols-[1fr_1fr]">
           {/* Text on the left */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
@@ -1054,7 +1055,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
             </div>
           </div>
 
-         {/* Right Side: Dynamic Collage Grid */}
+          {/* Right Side: Dynamic Collage Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', width: '100%' }}>
             
             {/* Top Left: Vertical 1 */}
@@ -1095,6 +1096,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
             
           </div>
         </div>
+
         {/* ── SECTION THREE: Action Buttons ── */}
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'flex-start' }}>
           <button
