@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import portraitImg from './portrait.png';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -413,7 +414,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               }}
             >
               Founder of Web4. I build systems that help businesses grow through strategy,
-              AI, marketing, and technology. I write about the principles behind building
+              AI, marketing, and technology. I also write about the principles behind building
               businesses, people, and organizations that perform consistently over time.
             </p>
             <div className="anim-fade-up-delay-3" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -464,9 +465,18 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             </div>
           </div>
 
-          {/* Right: image placeholder */}
+         {/* Right: portrait image */}
           <div className="anim-fade-up-delay-2 hidden md:block">
-            <ImagePlaceholder aspectRatio="4/5" />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
+              <Image
+                src="/portrait.png" 
+                alt="Portrait" 
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -498,8 +508,8 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               my father build a travel company after decades in aviation."
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8, marginBottom: '32px' }}>
-              That formative view — of a person applying accumulated expertise to build something
-              real and lasting — shaped how I think about business, leadership, and growth.
+              That formative view of a person applying accumulated expertise to build something
+              real and lasting shaped how I think about business, leadership, and growth.
               I've carried that lens into Web4 and every system I've built since.
             </p>
             <button
@@ -773,7 +783,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
           <a
-            href="mailto:ik@web4.com"
+            href="mailto:ikaminumail@gmail.com"
             style={{
               fontFamily: F.display,
               fontSize: '22px',
@@ -784,7 +794,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             onMouseEnter={e => e.currentTarget.style.color = C.emeraldBright}
             onMouseLeave={e => e.currentTarget.style.color = C.text}
           >
-            ik@web4.com
+            ikaminumail@gmail.com
           </a>
           <div style={{ display: 'flex', gap: '28px', marginTop: '16px' }}>
             {['LinkedIn', 'X', 'Instagram'].map((platform) => (
