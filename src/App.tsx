@@ -864,7 +864,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
       <Rule />
 
-{/* Contact */}
+      {/* Contact */}
       <section id="contact" style={{ padding: '100px 32px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <SectionLabel>Contact</SectionLabel>
         <h2 style={{
