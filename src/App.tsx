@@ -390,6 +390,69 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
     </>
   )
 }
+
+// ── Global Footer ─────────────────────────────────────────────────────────────
+
+function Footer() {
+  return (
+    <footer style={{ 
+      borderTop: `1px solid ${C.border}`, 
+      padding: '40px 24px', 
+      marginTop: 'auto',
+      backgroundColor: C.bg 
+    }}>
+      <div style={{ 
+        maxWidth: '1200px', 
+        margin: '0 auto', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '24px'
+      }}>
+        {/* Left Side: Copyright or Brand Note */}
+        <span style={{ 
+          fontFamily: F.body, 
+          fontSize: '11px', 
+          letterSpacing: '0.04em', 
+          color: C.muted 
+        }}>
+          © 2026 IK Aminu. Built with systems.
+        </span>
+
+        {/* Right Side: Minimal Social Footprint Links */}
+        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+          {[
+            { label: 'WA', href: 'https://wa.me/234XXXXXXXXXX' },
+            { label: 'LN', href: 'https://linkedin.com/in/YOUR_USERNAME' },
+            { label: 'X', href: 'https://x.com/YOUR_USERNAME' },
+            { label: 'IG', href: 'https://instagram.com/YOUR_USERNAME' }
+          ].map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ 
+                fontFamily: F.body, 
+                fontSize: '11px', 
+                fontWeight: 500, 
+                letterSpacing: '0.08em', 
+                color: C.muted, 
+                textDecoration: 'none',
+                transition: 'color 0.2s ease' 
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = C.text}
+              onMouseLeave={e => e.currentTarget.style.color = C.muted}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
+  )
+}
 // ── Home Page ─────────────────────────────────────────────────────────────────
 
 function HomePage({ setPage }: { setPage: (p: Page) => void }) {
@@ -1565,11 +1628,22 @@ export default function App() {
   }
 
   return (
-    <div style={{ backgroundColor: C.bg, minHeight: '100vh', color: C.text }}>
+    <div style={{ 
+      backgroundColor: C.bg, 
+      minHeight: '100vh', 
+      color: C.text,
+      display: 'flex',
+      flexDirection: 'column' // Sets up a vertical stack structure
+    }}>
       <Nav currentPage={currentPage} setPage={setCurrentPage} />
-      <main key={currentPage} className="anim-fade-in">
+      
+      {/* The main content */}
+      <main key={currentPage} className="anim-fade-in" style={{ flex: 1 }}>
         {renderPage()}
       </main>
+
+      {/* The footer */}
+      <Footer />
     </div>
   )
 }
