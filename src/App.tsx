@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 import portraitImg from './portrait.png';
+import portraitImg from './portrait.png';
+import verticalImg from './vertical.png';
+import horizontalImg from './horizontal.png';
+import vertical1Img from './vertical1.png';
+import horizontal1Img from './horizontal1.png';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -981,30 +986,47 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
             </div>
           </div>
 
-          {/* Right Side: Dynamic Collage Grid */}
+         {/* Right Side: Dynamic Collage Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', width: '100%' }}>
+            
             {/* Top Left: Vertical 1 */}
             <div style={{ aspectRatio: '3/4', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden' }}>
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Vertical 1</div>
+              <img 
+                src={verticalImg} 
+                alt="About focus" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
             </div>
             
             {/* Top Right: Horizontal 1 */}
             <div style={{ aspectRatio: '4/3', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden', alignSelf: 'start' }}>
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Horizontal 1</div>
+              <img 
+                src={horizontalImg} 
+                alt="Systems landscape" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
             </div>
 
             {/* Bottom Left: Horizontal 2 */}
             <div style={{ aspectRatio: '4/3', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden' }}>
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Horizontal 2</div>
+              <img 
+                src={horizontal1Img} 
+                alt="Workspace session" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
             </div>
 
             {/* Bottom Right: Vertical 2 */}
             <div style={{ aspectRatio: '3/4', backgroundColor: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: '6px', overflow: 'hidden', marginTop: '-25%' }}>
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: C.muted, fontSize: '12px' }}>Vertical 2</div>
+              <img 
+                src={vertical1Img} 
+                alt="Process details" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
             </div>
+            
           </div>
         </div>
-
         {/* ── SECTION THREE: Action Buttons ── */}
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'flex-start' }}>
           <button
