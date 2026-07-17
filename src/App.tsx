@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import portraitImg from './portrait.png';
-import portraitImg from './portrait.png';
 import verticalImg from './vertical.png';
 import horizontalImg from './horizontal.png';
 import vertical1Img from './vertical1.png';
