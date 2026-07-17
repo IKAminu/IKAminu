@@ -1,0 +1,10 @@
+{
+  "description": "A minimalist personal site showcasing IK Aminu's expertise in systems thinking, business strategy, and AI through articles, projects, and insights.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
