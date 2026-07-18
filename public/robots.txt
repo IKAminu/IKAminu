@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ikaminu.eu.org/sitemap.xml
+Sitemap: https://ikaminu.cc.cd/sitemap.xml
