@@ -49,4 +49,4 @@ Facebook:
 https://www.facebook.com/share/18Y7h7ybNH/?mibextid=wwXIfr
 
 Website:
-https://ikaminu.github.io/IKAminu/
+[https://ikaminu.cc.cd](https://ikaminu.cc.cd/)
