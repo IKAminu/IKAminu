@@ -1,8 +1,14 @@
 {
-  "description": "A minimalist personal site showcasing IK Aminu's expertise in systems thinking, business strategy, and AI through articles, projects, and insights.",
+  "description": "A minimalist personal site showcasing IK Aminu's expertise in systems thinking, business strategy, AI automation, marketing, and cybersecurity.",
+
   "robots": {
-    "index": false
+    "index": true
   },
+
+  "openGraph": {
+    "image": "/og-image.jpg"
+  },
+
   "accessibility": {
     "addBypassLinks": false,
     "ignoreReducedMotion": false
