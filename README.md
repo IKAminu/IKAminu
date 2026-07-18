@@ -24,6 +24,16 @@ The website serves as the central home for my writing, projects, principles, and
 - Why Businesses Fail Because of Systems
 - Marketing Is an Operating System
 
+## Architecture & Focus
+- **Web4:** Systems design, AI automation, and strategic marketing framework infrastructure.
+- **Writing:** Documentation of principles, operational discipline, macroeconomics, and organizational execution.
+
+## Tech Stack
+- React (TSX)
+- Vite
+- Tailwind CSS
+- GitHub Actions CI/CD Pipeline
+
 ## Connect
 
 Instagram:
