@@ -1214,7 +1214,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
 }
 // ── Writing Page ──────────────────────────────────────────────────────────────
 
-function WritingPage() {
+function WritingPage({ setPage }: { setPage: (p: Page) => void }) {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
       <div className="anim-fade-in">
@@ -1238,22 +1238,25 @@ function WritingPage() {
 
 {/* Featured article */}
 <div style={{ marginBottom: '2px' }}>
-  <div
-    onClick={() => {
-      setPage('marketing-systems');
-      window.scrollTo(0, 0);
-    }}
-    style={{
-      border: `1px solid ${C.border}`,
-      backgroundColor: C.surfaceAlt,
-      padding: '56px',
-      marginBottom: '2px',
-      cursor: 'pointer',
-      transition: 'border-color 0.2s ease',
-    }}
-    onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
-    onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
-  >
+<button
+  onClick={() => {
+    setPage('marketing-systems');
+    window.scrollTo(0, 0);
+  }}
+  style={{
+    width: '100%',
+    textAlign: 'left',
+    display: 'block',
+    border: `1px solid ${C.border}`,
+    backgroundColor: C.surfaceAlt,
+    padding: '56px',
+    marginBottom: '2px',
+    cursor: 'pointer',
+    transition: 'border-color 0.2s ease',
+  }}
+  onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
+  onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
+>
     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
       <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
         <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Featured</span>
@@ -1268,7 +1271,7 @@ function WritingPage() {
     <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
       {ARTICLES[0].excerpt}
     </p>
-  </div>
+</button>
 </div>
 
         {/* Article list */}
@@ -1613,15 +1616,16 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [currentPage])
 
-  const renderPage = () => {
+const renderPage = () => {
     switch (currentPage) {
       case 'home': return <HomePage setPage={setCurrentPage} />
       case 'about': return <AboutPage setPage={setCurrentPage} />
-      case 'writing': return <WritingPage />
+      case 'writing': return <WritingPage setPage={setCurrentPage} />
       case 'projects': return <ProjectsPage setPage={setCurrentPage} />
       case 'web4': return <Web4Page />
       case 'principles': return <PrinciplesPage />
       case 'now': return <NowPage />
+      case 'marketing-systems': return <WhyMarketingArticle />
     }
   }
 
