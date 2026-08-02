@@ -1234,12 +1234,11 @@ function WritingPage() {
           These are not opinion pieces. They are working principles, tested everyday,
           refined through practice, published to hold myself accountable.
         </p>
-        )
-        
+
  {/* Featured article */}
         <div style={{ marginBottom: '2px' }}>
           <a
-            href="/why-marketing-is-really-a-systems-problem.tsx"
+            href="/why-marketing-is-really-a-systems-problem"
             style={{
               display: 'block',
               textDecoration: 'none',
