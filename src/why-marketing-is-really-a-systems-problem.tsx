@@ -27,7 +27,7 @@ export default function WhyMarketingIsASystemsProblem() {
   }, [])
 
   return (
-    <div style={{ backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '40px 24px 80px' }}>
+    <div style={{ paddingTop: '100px', backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '40px 24px 80px' }}>
       
       {/* Top Header / Back Navigation */}
       <header style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
