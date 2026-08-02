@@ -1236,18 +1236,30 @@ function WritingPage() {
         </p>
 
         {/* Featured article */}
-        <div style={{ marginBottom: '2px' }}>
-          <div style={{
-            border: `1px solid ${C.border}`,
-            backgroundColor: C.surfaceAlt,
-            padding: '56px',
-            marginBottom: '2px',
-            cursor: 'pointer',
-            transition: 'border-color 0.2s ease',
-          }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
-            onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
-          >
+       {/* Featured article */}
+<div style={{ marginBottom: '2px' }}>
+  <a
+    href="/writing/why-marketing-is-really-a-systems-problem"
+    style={{
+      display: 'block',
+      textDecoration: 'none',
+      color: 'inherit',
+    }}
+  >
+    <div
+      style={{
+        border: `1px solid ${C.border}`,
+        backgroundColor: C.surfaceAlt,
+        padding: '56px',
+        marginBottom: '2px',
+        cursor: 'pointer',
+        transition: 'border-color 0.2s ease',
+      }}
+    >
+      {/* Card content remains untouched */}
+    </div>
+  </a>
+</div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                 <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Featured</span>
