@@ -26,31 +26,36 @@ export default function WhyMarketingIsASystemsProblem() {
     window.scrollTo(0, 0)
   }, [])
 
-  return (
-    <div style={{ paddingTop: '100px', backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '40px 24px 80px' }}>
+return (
+  <div style={{ backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '120px 24px 80px' }}>
+    
+    {/* Top Header / Back Navigation */}
+    <header style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
+      <a
+        href="#writing"
+        onClick={(e) => {
+          e.preventDefault();
+          if (onBack) onBack(); // or setPage('writing') depending on how you pass props
+        }}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          fontFamily: F.body,
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: C.emeraldBright,
+          textDecoration: 'none',
+          marginBottom: '40px',
+          transition: 'opacity 0.2s',
+          cursor: 'pointer'
+        }}
+      >
+        ← Back to Writing
+      </a>
       
-      {/* Top Header / Back Navigation */}
-      <header style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
-        <a
-          href="/#writing"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            fontFamily: F.body,
-            fontSize: '12px',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: C.emeraldBright,
-            textDecoration: 'none',
-            marginBottom: '40px',
-            transition: 'opacity 0.2s'
-          }}
-        >
-          ← Back to Writing
-        </a>
-
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
           <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>
             Marketing Systems By IK Aminu
