@@ -1234,8 +1234,8 @@ function WritingPage() {
           These are not opinion pieces. They are working principles, tested everyday,
           refined through practice, published to hold myself accountable.
         </p>
-
-        {/* Featured article */}
+        )
+        
        {/* Featured article */}
 <div style={{ marginBottom: '2px' }}>
   <a
