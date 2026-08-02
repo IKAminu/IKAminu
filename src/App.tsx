@@ -5,10 +5,11 @@ import horizontalImg from './horizontal.png';
 import vertical1Img from './vertical1.png';
 import horizontal1Img from './horizontal1.png';
 import img5Img from './img5.png';
+import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now'
+type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now' | 'marketing-systems'
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 
@@ -1235,45 +1236,40 @@ function WritingPage() {
           refined through practice, published to hold myself accountable.
         </p>
 
- {/* Featured article */}
-        <div style={{ marginBottom: '2px' }}>
-          <a
-            href="/why-marketing-is-really-a-systems-problem.html"
-            style={{
-              display: 'block',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-          >
-            <div
-              style={{
-                border: `1px solid ${C.border}`,
-                backgroundColor: C.surfaceAlt,
-                padding: '56px',
-                marginBottom: '2px',
-                cursor: 'pointer',
-                transition: 'border-color 0.2s ease',
-              }}
-              onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
-              onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Featured</span>
-                  <span style={{ width: '1px', height: '12px', backgroundColor: C.border }} />
-                  <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.muted }}>{ARTICLES[0].category}</span>
-                </div>
-                <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>{ARTICLES[0].date} · {ARTICLES[0].readTime}</span>
-              </div>
-              <h2 style={{ fontFamily: F.display, fontSize: 'clamp(28px, 3.5vw, 46px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: '-0.02em', color: C.text, marginBottom: '24px' }}>
-                {ARTICLES[0].title}
-              </h2>
-              <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
-                {ARTICLES[0].excerpt}
-              </p>
-            </div>
-          </a>
-        </div>
+{/* Featured article */}
+<div style={{ marginBottom: '2px' }}>
+  <div
+    onClick={() => {
+      setPage('marketing-systems');
+      window.scrollTo(0, 0);
+    }}
+    style={{
+      border: `1px solid ${C.border}`,
+      backgroundColor: C.surfaceAlt,
+      padding: '56px',
+      marginBottom: '2px',
+      cursor: 'pointer',
+      transition: 'border-color 0.2s ease',
+    }}
+    onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
+    onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
+  >
+    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
+      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Featured</span>
+        <span style={{ width: '1px', height: '12px', backgroundColor: C.border }} />
+        <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.muted }}>{ARTICLES[0].category}</span>
+      </div>
+      <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>{ARTICLES[0].date} · {ARTICLES[0].readTime}</span>
+    </div>
+    <h2 style={{ fontFamily: F.display, fontSize: 'clamp(28px, 3.5vw, 46px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: '-0.02em', color: C.text, marginBottom: '24px' }}>
+      {ARTICLES[0].title}
+    </h2>
+    <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
+      {ARTICLES[0].excerpt}
+    </p>
+  </div>
+</div>
 
         {/* Article list */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
