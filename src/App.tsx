@@ -1234,7 +1234,6 @@ function WritingPage() {
           These are not opinion pieces. They are working principles, tested everyday,
           refined through practice, published to hold myself accountable.
         </p>
-        }
         )
         
  {/* Featured article */}
