@@ -79,7 +79,7 @@ return (
         </h1>
 
         <p style={{ fontFamily: F.body, fontSize: '18px', color: C.mutedLight, lineHeight: 1.7, fontStyle: 'italic', borderLeft: `2px solid ${C.emeraldBright}`, paddingLeft: '20px' }}>
-          Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists.
+          Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists, for better or worse.
         </p>
       </header>
 
