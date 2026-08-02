@@ -8,7 +8,7 @@ import img5Img from './img5.png';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now' | 'article-1'
+type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now'
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 
@@ -37,93 +37,51 @@ const F = {
 const ARTICLES = [
   {
     id: 1,
-    slug: "why-marketing-is-really-a-systems-problem",
     title: "Why Marketing Is Really a Systems Problem",
     date: "July 2026",
-    category: "Marketing Systems By IK Aminu",
+    category: "Marketing · Systems · By IK Aminu",
     excerpt: "Most marketing fails not because the message is wrong, but because the infrastructure behind it is broken. Marketing is the output of your business system, amplifying what already exists, for better or worse.",
     readTime: "8 min read",
     featured: true,
-    content: [
-      { type: "paragraph", text: "Most people hear the word 'marketing' and immediately think 'ads'. They picture flashy videos, billboards, Instagram reels, influencers, Meta Ads Manager, Google Ads, SEO, or whichever platform is currently convincing founders that salvation is only one monthly subscription away." },
-      { type: "paragraph", text: "So they do what almost everyone does." },
-      { type: "paragraph", text: "They open a Meta Ads account, spend three hours trying to figure out the ancient black magic that is Meta Ads Manager, burn through a chunk of their budget, get a handful of clicks and maybe one lead, then conclude that 'Facebook ads don't work.'" },
-      { type: "paragraph", text: "Others go one step further. They hire an agency (see WEB4), invest in branding, content, social media management, websites, and advertising, only to spend the next few weeks refreshing WhatsApp while asking the same question every founder eventually asks:" },
-      { type: "blockquote", text: "\"Where are the leads?\"" },
-      { type: "paragraph", text: "There is nothing inherently wrong with any of this. Agencies matter. Advertising matters. Branding matters. Good creative matters. The problem is that they're usually trying to solve the wrong problem." },
-      { type: "paragraph", text: "Usually, marketing isn't the thing that is broken in all this. More often than not it’s the business system. Businesses suffer from a systems problem that happens to reveal itself through marketing." },
-      { type: "paragraph", text: "Marketing has developed a strange reputation over the years. People treat it like a magical machine. Feed it enough money and customers are supposed to appear. That would honestly be nice. As an agency owner I can tell you that It would have saved our agency from explaining the same thing every Tuesday morning." },
-      { type: "paragraph", text: "Unfortunately, we are not in a fairytale land. Marketing doesn't create demand, ever. It only amplifies whatever already exists, if that’s missing or broken? Get ready to sink money." },
-      { type: "heading", text: "Analogy: Think about an aircraft's radio." },
-      { type: "paragraph", text: "A radio allows the pilot to communicate with hundreds of people across enormous distances. It is incredibly powerful. But if the pilot gives the wrong coordinates, poor instructions, or doesn't know where he's flying, a better radio doesn't solve the problem. It simply allows more people to hear the mistake." },
-      { type: "paragraph", text: "Marketing works the exact same way. In so which, if your offer is confusing, marketing helps more people become confused." },
-      { type: "paragraph", text: "If your pricing makes no sense, marketing helps more people decide not to buy. Or worse, makes the wrong people come to you." },
-      { type: "paragraph", text: "If your customer experience is frustrating, marketing simply delivers more disappointed customers into the same experience." },
-      { type: "paragraph", text: "The amplifier isn't broken. The problem is the signal going into it. Marketing works much the same way. Two companies can spend exactly the same amount on advertising and achieve completely different outcomes because the quality of the underlying message determines how effectively the budget is used. One business earns several dollars for every dollar invested, while the other concludes that marketing is a waste of money, even though the real issue was never the advertising spend itself." },
-      { type: "heading", text: "Consider the journey from product to loyal customer." },
-      { type: "paragraph", text: "A business first builds something people actually want. Then it figures out who that product is really for. That becomes positioning. Positioning shapes the brand. The brand influences the marketing. Marketing generates conversations that become sales. Sales hand customers to delivery. Delivery determines satisfaction. Satisfied customers return and recommend others." },
-      { type: "diagram", title: "The Linear Demand & Revenue Pipeline", steps: ["Product", "Positioning", "Brand", "Marketing", "Sales", "Delivery", "Retention", "Referrals"] },
-      { type: "paragraph", text: "Notice something here: marketing sits in the dead middle of the process. It isn't the beginning, and it isn't the end. Instead, it depends on every system that comes before it, while every system that follows determines whether the marketing ultimately becomes profitable." },
-      { type: "paragraph", text: "Suppose your sales process is inconsistent. Some enquiries receive replies in five minutes while others wait three days because someone forgot to charge the office phone. Marketing doesn't fix that. It simply gives your sales team more people to accidentally ignore." },
-      { type: "paragraph", text: "Suppose your onboarding process is poor. Customers buy once, become confused, and quietly disappear. More advertising only increases the number of customers who leave disappointed." },
-      { type: "paragraph", text: "Suppose your positioning is unclear. You try to sell to everyone because everyone has money, at least in theory. Your website talks to restaurant owners, hospitals, construction companies, schools, travel agencies, and barbers at exactly the same time. Marketing faithfully delivers that confused message to thousands of people." },
-      { type: "paragraph", text: "The amplifier isn't broken. The issue is the signal. This is why experienced marketers rarely fixate on colours, fonts, logos, or button placements in the early stages. Those elements certainly have their place, but they only become meaningful once the underlying message, offer, and positioning are already working." },
-      { type: "paragraph", text: "An elegant website cannot compensate for an offer nobody understands. Beautiful branding cannot rescue poor customer service. Brilliant advertisements cannot consistently sell a product that solves no meaningful problem." },
-      { type: "heading", text: "Good marketing exposes weaknesses." },
-      { type: "paragraph", text: "Ironically, that's one of its greatest strengths." },
-      { type: "paragraph", text: "A successful marketing campaign is often the fastest audit a business will ever receive. If large numbers of people see your offer and don't buy, you've learned something valuable. If they buy but don't stay, you've learned something else. If they stay but never recommend anyone, the system has identified another weak point." },
-      { type: "paragraph", text: "Marketing constantly tells you where the business leaks." },
-      { type: "paragraph", text: "The mistake is assuming the leak exists inside marketing itself. Most of the time it doesn't." },
-      { type: "heading", text: "Scaling the Machine" },
-      { type: "paragraph", text: "Founders often ask how they can scale their marketing. The better question is whether the business underneath is ready to be scaled at all." },
-      { type: "paragraph", text: "Growth multiplies everything. It multiplies strengths, but it also multiplies weaknesses. A business with poor delivery doesn't become successful because it reaches more customers. It simply disappoints more people in less time." },
-      { type: "paragraph", text: "The same principle applies everywhere. A larger sales team doesn't fix a broken onboarding process. More traffic doesn't fix unclear positioning. Bigger advertising budgets don't fix products customers don't actually value." },
-      { type: "blockquote", text: "Scale is multiplication. It never changes the equation." },
-      { type: "paragraph", text: "The businesses that grow consistently aren't usually the ones with the cleverest advertisements. They're the ones whose systems are quietly doing their jobs." },
-      { type: "paragraph", text: "Marketing simply makes those systems visible." }
-    ]
   },
   {
     id: 2,
-    slug: "cybersecurity-is-mostly-human-design",
     title: "Cybersecurity Is Mostly Human Design",
     date: "June 2026",
-    category: "Cybersecurity Systems By IK Aminu",
+    category: "Cybersecurity · Systems · By IK Aminu",
     excerpt: "The weakest link in any security system isn't the firewall. It's the behavior pattern of the people operating within it. Security is a design problem first.",
     readTime: "6 min read",
     featured: false,
   },
   {
     id: 3,
-    slug: "why-businesses-fail-because-of-systems-not-people",
     title: "Why Businesses Fail Because of Systems, Not People",
     date: "June 2026",
-    category: "Business Leadership By IK Aminu",
+    category: "Business · Leadership · By IK Aminu",
     excerpt: "We fire people when we should redesign processes. Most organizational failure is a failure of system design, not individual performance.",
     readTime: "7 min read",
     featured: false,
   },
   {
     id: 4,
-    slug: "competence-is-designed",
     title: "Competence Is Designed",
     date: "May 2026",
-    category: "Leadership Excellence By IK Aminu",
+    category: "Leadership · Excellence · By IK Aminu",
     excerpt: "Consistent high performance isn't a personality trait. It's the result of systems, feedback loops, and deliberate constraints built over time.",
     readTime: "5 min read",
     featured: false,
   },
   {
     id: 5,
-    slug: "the-hidden-cost-of-inconsistency",
     title: "The Hidden Cost of Inconsistency",
     date: "May 2026",
-    category: "Business Operations By IK Aminu",
+    category: "Business · Operations · By IK Aminu",
     excerpt: "Inconsistency is the most expensive habit in any organization. It erodes trust, compounds errors, and makes everything harder than it needs to be.",
     readTime: "6 min read",
     featured: false,
   },
 ]
+
 const PRINCIPLES = [
   {
     number: "01",
@@ -1224,7 +1182,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
         {/* ── SECTION THREE: Action Buttons ── */}
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'flex-start' }}>
           <button
-            onClick={() => setPage('article-1')}
+            onClick={() => setPage('writing')}
             style={{
               fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
               color: C.text, padding: '12px 24px', border: `1px solid ${C.borderMid}`,
@@ -1278,16 +1236,15 @@ function WritingPage() {
         </p>
 
         {/* Featured article */}
-          <div style={{ marginBottom: '2px' }}>
-            <div style={{
-              border: `1px solid ${C.border}`,
-              backgroundColor: C.surfaceAlt,
-              padding: '56px',
-              marginBottom: '2px',
-              cursor: 'pointer',
-              transition: 'border-color 0.2s ease',
-            }}
-            onClick={() => setPage('article-1')} 
+        <div style={{ marginBottom: '2px' }}>
+          <div style={{
+            border: `1px solid ${C.border}`,
+            backgroundColor: C.surfaceAlt,
+            padding: '56px',
+            marginBottom: '2px',
+            cursor: 'pointer',
+            transition: 'border-color 0.2s ease',
+          }}
             onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
             onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
           >
@@ -1641,180 +1598,6 @@ function NowPage() {
   )
 }
 
-
-// ── Article Detail Page ───────────────────────────────────────────────────────────────────────
-// (SEO & Dynamic Reader Component)
-function ArticleDetailPage({ articleId, setPage }: { articleId: number; setPage: (p: Page) => void }) {
-  const article = ARTICLES.find((a) => a.id === articleId) || ARTICLES[0]
-
-  // Update browser tab document title for SEO & sharing
-  useEffect(() => {
-    document.title = `${article.title} | IK Aminu`
-    return () => {
-      document.title = "IK Aminu | Engineering Competence Through Systems"
-    }
-  }, [article])
-
-  return (
-    <article itemScope itemType="https://schema.org/BlogPosting" style={{ maxWidth: '800px', margin: '0 auto', padding: '140px 24px 100px' }}>
-      <div className="anim-fade-in">
-        {/* Back Navigation Button */}
-        <button
-          onClick={() => setPage('writing')}
-          style={{
-            fontFamily: F.body,
-            fontSize: '12px',
-            fontWeight: 500,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            color: C.emeraldBright,
-            backgroundColor: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            marginBottom: '40px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: 0
-          }}
-        >
-          ← Back to Writing
-        </button>
-
-        {/* Semantic Article Header */}
-        <header style={{ marginBottom: '48px', borderBottom: `1px solid ${C.border}`, paddingBottom: '32px' }}>
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>
-              {article.category}
-            </span>
-            <span style={{ width: '1px', height: '12px', backgroundColor: C.border }} />
-            <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>
-              {article.date} • {article.readTime}
-            </span>
-          </div>
-
-          <h1 itemProp="headline" style={{
-            fontFamily: F.display,
-            fontSize: 'clamp(32px, 4.5vw, 54px)',
-            fontWeight: 400,
-            lineHeight: 1.15,
-            letterSpacing: '-0.025em',
-            color: C.text,
-            marginBottom: '24px'
-          }}>
-            {article.title}
-          </h1>
-
-          <p style={{ fontFamily: F.body, fontSize: '18px', color: C.mutedLight, lineHeight: 1.7, fontStyle: 'italic' }}>
-            {article.excerpt}
-          </p>
-        </header>
-
-        {/* Render Formatted Content Nodes */}
-        <div itemProp="articleBody" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {article.content?.map((node, idx) => {
-            if (node.type === 'heading') {
-              return (
-                <h2 key={idx} style={{
-                  fontFamily: F.display,
-                  fontSize: 'clamp(24px, 3vw, 32px)',
-                  fontWeight: 400,
-                  lineHeight: 1.25,
-                  color: C.text,
-                  marginTop: '24px',
-                  marginBottom: '8px',
-                  letterSpacing: '-0.015em'
-                }}>
-                  {node.text}
-                </h2>
-              )
-            }
-            if (node.type === 'blockquote') {
-              return (
-                <blockquote key={idx} style={{
-                  borderLeft: `2px solid ${C.emeraldBright}`,
-                  paddingLeft: '24px',
-                  margin: '16px 0',
-                  fontFamily: F.display,
-                  fontSize: '22px',
-                  fontStyle: 'italic',
-                  color: C.text,
-                  lineHeight: 1.5
-                }}>
-                  {node.text}
-                </blockquote>
-              )
-            }
-            if (node.type === 'diagram') {
-              return (
-                <div key={idx} style={{
-                  backgroundColor: C.surfaceAlt,
-                  border: `1px solid ${C.border}`,
-                  borderRadius: '6px',
-                  padding: '32px 24px',
-                  margin: '24px 0',
-                  textAlign: 'center'
-                }}>
-                  <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: C.emeraldBright, display: 'block', marginBottom: '20px' }}>
-                    {node.title}
-                  </span>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '12px' }}>
-                    {node.steps?.map((step, sIdx) => (
-                      <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <span style={{ fontFamily: F.body, fontSize: '14px', color: C.text, padding: '8px 16px', backgroundColor: '#0c160f', border: `1px solid rgba(14, 102, 73, 0.4)`, borderRadius: '4px' }}>
-                          {step}
-                        </span>
-                        {sIdx < (node.steps?.length || 0) - 1 && (
-                          <span style={{ color: C.emeraldBright, fontSize: '14px' }}>↓</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            }
-            return (
-              <p key={idx} style={{
-                fontFamily: F.body,
-                fontSize: '17px',
-                color: C.mutedLight,
-                lineHeight: 1.8
-              }}>
-                {node.text}
-              </p>
-            )
-          })}
-        </div>
-
-        {/* Article Footer & Author Signature */}
-        <footer style={{ marginTop: '80px', borderTop: `1px solid ${C.border}`, paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-          <div>
-            <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Written by</span>
-            <p style={{ fontFamily: F.display, fontSize: '18px', color: C.text, marginTop: '4px' }}>IK Aminu</p>
-          </div>
-          <button
-            onClick={() => setPage('writing')}
-            style={{
-              fontFamily: F.body,
-              fontSize: '13px',
-              fontWeight: 500,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: C.text,
-              padding: '12px 24px',
-              border: `1px solid ${C.borderMid}`,
-              backgroundColor: 'transparent',
-              cursor: 'pointer'
-            }}
-          >
-            All Essays →
-          </button>
-        </footer>
-      </div>
-    </article>
-  )
-}
-
 // ── App ───────────────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -1828,28 +1611,30 @@ export default function App() {
     switch (currentPage) {
       case 'home': return <HomePage setPage={setCurrentPage} />
       case 'about': return <AboutPage setPage={setCurrentPage} />
-      case 'writing': return <WritingPage setPage={setCurrentPage} />
+      case 'writing': return <WritingPage />
       case 'projects': return <ProjectsPage setPage={setCurrentPage} />
       case 'web4': return <Web4Page />
       case 'principles': return <PrinciplesPage />
       case 'now': return <NowPage />
-      case 'article-1': return <ArticleDetailPage articleId={1} setPage={setCurrentPage} />
-      default: return <HomePage setPage={setCurrentPage} />
     }
   }
 
   return (
-    <div style={{
-      backgroundColor: C.bg,
-      minHeight: '100vh',
+    <div style={{ 
+      backgroundColor: C.bg, 
+      minHeight: '100vh', 
       color: C.text,
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column' // Sets up a vertical stack structure
     }}>
       <Nav currentPage={currentPage} setPage={setCurrentPage} />
+      
+      {/* The main content */}
       <main key={currentPage} className="anim-fade-in" style={{ flex: 1 }}>
         {renderPage()}
       </main>
+
+      {/* The footer */}
       <Footer />
     </div>
   )
