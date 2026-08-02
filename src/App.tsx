@@ -1239,7 +1239,7 @@ function WritingPage() {
  {/* Featured article */}
         <div style={{ marginBottom: '2px' }}>
           <a
-            href="/writing/why-marketing-is-really-a-systems-problem"
+            href="/why-marketing-is-really-a-systems-problem"
             style={{
               display: 'block',
               textDecoration: 'none',
