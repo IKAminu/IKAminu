@@ -8,7 +8,7 @@ import img5Img from './img5.png';
 import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem';
 import CybersecurityIsMostlyHumanDesign from './CybersecurityIsMostlyHumanDesign';
 
-// ── Types ─────────────────────────────────────────────────────────────────────
+// ── Types ─────────────────────────────────────────────────────────────────────-
 
 type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now' | 'marketing-systems'
 
