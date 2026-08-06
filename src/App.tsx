@@ -606,7 +606,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               marginBottom: '32px',
             }}>
               "My understanding of business didn't begin in a startup. It began watching
-              my father build a travel company after decades in aviation."
+              my father build a travel company after decades in aviatioon."
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8, marginBottom: '32px' }}>
               That formative view of a person applying accumulated expertise to build something
