@@ -5,7 +5,8 @@ import horizontalImg from './horizontal.png';
 import vertical1Img from './vertical1.png';
 import horizontal1Img from './horizontal1.png';
 import img5Img from './img5.png';
-import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem'
+import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem';
+import CybersecurityIsMostlyHumanDesign from './CybersecurityIsMostlyHumanDesign';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -45,14 +46,13 @@ const ARTICLES = [
     readTime: "8 min read",
     featured: true,
   },
-  {
-    id: 2,
-    title: "Cybersecurity Is Mostly Human Design",
-    date: "June 2026",
-    category: "Cybersecurity · Systems · By IK Aminu",
-    excerpt: "The weakest link in any security system isn't the firewall. It's the behavior pattern of the people operating within it. Security is a design problem first.",
-    readTime: "6 min read",
-    featured: false,
+ {
+    id: 'cybersecurity-is-mostly-human-design',
+    title: 'Cybersecurity is mostly human design',
+    date: 'August 2026',
+    readTime: '5 min read',
+    excerpt: 'Designing for human limitations, instead of pretending they don’t exist, is where real cybersecurity begins.',
+    component: CybersecurityIsMostlyHumanDesign
   },
   {
     id: 3,
@@ -1215,112 +1215,217 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
 // ── Writing Page ──────────────────────────────────────────────────────────────
 
 function WritingPage({ setPage }: { setPage: (p: Page) => void }) {
+  const featuredArticle = ARTICLES[0];
+  const listArticles = ARTICLES.slice(1);
+
+  const handleNavigate = (pageId: string) => {
+    setPage(pageId as Page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
       <div className="anim-fade-in">
         <SectionLabel>Writing</SectionLabel>
-        <h1 style={{
-          fontFamily: F.display,
-          fontSize: 'clamp(36px, 5vw, 64px)',
-          fontWeight: 400,
-          lineHeight: 1.1,
-          letterSpacing: '-0.025em',
-          color: C.text,
-          marginBottom: '24px',
-        }}>
+        
+        <h1
+          style={{
+            fontFamily: F.display,
+            fontSize: 'clamp(36px, 5vw, 64px)',
+            fontWeight: 400,
+            lineHeight: 1.1,
+            letterSpacing: '-0.025em',
+            color: C.text,
+            marginBottom: '24px',
+          }}
+        >
           Essays on Systems, psychology, <br />
           <em style={{ fontStyle: 'italic', color: C.emeraldBright }}>Business & Competence.</em>
         </h1>
-        <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, maxWidth: '560px', lineHeight: 1.7, marginBottom: '80px' }}>
+
+        <p
+          style={{
+            fontFamily: F.body,
+            fontSize: '16px',
+            color: C.muted,
+            maxWidth: '560px',
+            lineHeight: 1.7,
+            marginBottom: '80px',
+          }}
+        >
           These are not opinion pieces. They are working principles, tested everyday,
           refined through practice, published to hold myself accountable.
         </p>
 
-{/* Featured article */}
-<div style={{ marginBottom: '2px' }}>
-<button
-  onClick={() => {
-    setPage('marketing-systems');
-    window.scrollTo(0, 0);
-  }}
-  style={{
-    width: '100%',
-    textAlign: 'left',
-    display: 'block',
-    border: `1px solid ${C.border}`,
-    backgroundColor: C.surfaceAlt,
-    padding: '56px',
-    marginBottom: '2px',
-    cursor: 'pointer',
-    transition: 'border-color 0.2s ease',
-  }}
-  onMouseEnter={e => e.currentTarget.style.borderColor = C.borderMid}
-  onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
->
-    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '28px', flexWrap: 'wrap', gap: '12px' }}>
-      <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-        <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Featured</span>
-        <span style={{ width: '1px', height: '12px', backgroundColor: C.border }} />
-        <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.muted }}>{ARTICLES[0].category}</span>
-      </div>
-      <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>{ARTICLES[0].date} · {ARTICLES[0].readTime}</span>
-    </div>
-    <h2 style={{ fontFamily: F.display, fontSize: 'clamp(28px, 3.5vw, 46px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: '-0.02em', color: C.text, marginBottom: '24px' }}>
-      {ARTICLES[0].title}
-    </h2>
-    <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
-      {ARTICLES[0].excerpt}
-    </p>
-</button>
-</div>
-
-        {/* Article list */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-          {ARTICLES.slice(1).map((article) => (
-            <div
-              key={article.id}
+        {/* Featured Article */}
+        {featuredArticle && (
+          <div style={{ marginBottom: '2px' }}>
+            <button
+              onClick={() => handleNavigate(featuredArticle.id)}
               style={{
+                width: '100%',
+                textAlign: 'left',
+                display: 'block',
+                border: `1px solid ${C.border}`,
+                backgroundColor: C.surfaceAlt,
+                padding: '56px',
+                cursor: 'pointer',
+                transition: 'border-color 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = C.borderMid)}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = C.border)}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  justify: 'space-between',
+                  marginBottom: '28px',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                }}
+              >
+                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                  <span
+                    style={{
+                      fontFamily: F.body,
+                      fontSize: '11px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: C.emeraldBright,
+                    }}
+                  >
+                    Featured
+                  </span>
+                  <span style={{ width: '1px', height: '12px', backgroundColor: C.border }} />
+                  <span
+                    style={{
+                      fontFamily: F.body,
+                      fontSize: '11px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: C.muted,
+                    }}
+                  >
+                    {featuredArticle.category}
+                  </span>
+                </div>
+                <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>
+                  {featuredArticle.date} · {featuredArticle.readTime}
+                </span>
+              </div>
+
+              <h2
+                style={{
+                  fontFamily: F.display,
+                  fontSize: 'clamp(28px, 3.5vw, 46px)',
+                  fontWeight: 400,
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                  color: C.text,
+                  marginBottom: '24px',
+                }}
+              >
+                {featuredArticle.title}
+              </h2>
+
+              <p
+                style={{
+                  fontFamily: F.body,
+                  fontSize: '17px',
+                  color: C.mutedLight,
+                  lineHeight: 1.75,
+                  maxWidth: '680px',
+                }}
+              >
+                {featuredArticle.excerpt}
+              </p>
+            </button>
+          </div>
+        )}
+
+        {/* Article List */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          {listArticles.map((article) => (
+            <button
+              key={article.id}
+              onClick={() => handleNavigate(article.id)}
+              style={{
+                width: '100%',
+                textAlign: 'left',
                 display: 'grid',
                 gridTemplateColumns: '1fr auto',
                 gap: '32px',
                 alignItems: 'start',
                 padding: '36px 40px',
                 border: `1px solid ${C.border}`,
+                backgroundColor: 'transparent',
                 cursor: 'pointer',
                 transition: 'border-color 0.2s ease, background-color 0.2s ease',
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = C.borderMid
-                e.currentTarget.style.backgroundColor = C.surfaceAlt
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = C.borderMid;
+                e.currentTarget.style.backgroundColor = C.surfaceAlt;
               }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = C.border
-                e.currentTarget.style.backgroundColor = 'transparent'
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = C.border;
+                e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
               <div>
-                <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright, display: 'block', marginBottom: '14px' }}>
+                <span
+                  style={{
+                    fontFamily: F.body,
+                    fontSize: '11px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: C.emeraldBright,
+                    display: 'block',
+                    marginBottom: '14px',
+                  }}
+                >
                   {article.category}
                 </span>
-                <h3 style={{ fontFamily: F.display, fontSize: '22px', fontWeight: 400, lineHeight: 1.25, color: C.text, letterSpacing: '-0.01em', marginBottom: '12px' }}>
+                <h3
+                  style={{
+                    fontFamily: F.display,
+                    fontSize: '22px',
+                    fontWeight: 400,
+                    lineHeight: 1.25,
+                    color: C.text,
+                    letterSpacing: '-0.01em',
+                    marginBottom: '12px',
+                  }}
+                >
                   {article.title}
                 </h3>
                 <p style={{ fontFamily: F.body, fontSize: '14px', color: C.muted, lineHeight: 1.6 }}>
-                  {article.excerpt.split('.')[0]}.
+                  {article.excerpt}
                 </p>
               </div>
+
               <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted, display: 'block', marginBottom: '6px' }}>{article.date}</span>
-                <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>{article.readTime}</span>
+                <span
+                  style={{
+                    fontFamily: F.body,
+                    fontSize: '12px',
+                    color: C.muted,
+                    display: 'block',
+                    marginBottom: '6px',
+                  }}
+                >
+                  {article.date}
+                </span>
+                <span style={{ fontFamily: F.body, fontSize: '12px', color: C.muted }}>
+                  {article.readTime}
+                </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
-
 // ── Projects Page ─────────────────────────────────────────────────────────────
 
 function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
