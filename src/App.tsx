@@ -6,7 +6,7 @@ import vertical1Img from './vertical1.png';
 import horizontal1Img from './horizontal1.png';
 import img5Img from './img5.png';
 import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem';
-import CybersecurityIsMostlyHumanDesign from './Cybersecurity_is_mostly_human_design';
+import { CybersecurityIsMostlyHumanDesign } from './Cybersecurity_is_mostly_human_design';
 
 // ── Types ─────────────────────────────────────────────────────────────────────-
 
