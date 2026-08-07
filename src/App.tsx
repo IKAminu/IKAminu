@@ -1732,18 +1732,19 @@ export default function App() {
   }, [currentPage])
 
 const renderPage = () => {
-    switch (currentPage) {
-      case 'home': return <HomePage setPage={setCurrentPage} />
-      case 'about': return <AboutPage setPage={setCurrentPage} />
-      case 'writing': return <WritingPage setPage={setCurrentPage} />
-      case 'projects': return <ProjectsPage setPage={setCurrentPage} />
-      case 'web4': return <Web4Page />
-      case 'principles': return <PrinciplesPage />
-      case 'now': return <NowPage />
-      case 'marketing-systems': return <WhyMarketingArticle />
-    }
+  switch (currentPage) {
+    case 'home': return <HomePage setPage={setCurrentPage} />
+    case 'about': return <AboutPage setPage={setCurrentPage} />
+    case 'writing': return <WritingPage setPage={setCurrentPage} />
+    case 'projects': return <ProjectsPage setPage={setCurrentPage} />
+    case 'web4': return <Web4Page />
+    case 'principles': return <PrinciplesPage />
+    case 'now': return <NowPage />
+    case 'marketing-systems': return <WhyMarketingArticle />
+    case 'cybersecurity-is-mostly-human-design': return <CybersecurityIsMostlyHumanDesign />
+    default: return <HomePage setPage={setCurrentPage} />
   }
-
+}
   return (
     <div style={{ 
       backgroundColor: C.bg, 
