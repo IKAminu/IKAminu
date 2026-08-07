@@ -10,7 +10,16 @@ import { CybersecurityIsMostlyHumanDesign } from './Cybersecurity_is_mostly_huma
 
 // ── Types ─────────────────────────────────────────────────────────────────────-
 
-type Page = 'home' | 'about' | 'writing' | 'projects' | 'web4' | 'principles' | 'now' | 'marketing-systems'
+type Page = 
+  | 'home' 
+  | 'about' 
+  | 'writing' 
+  | 'projects' 
+  | 'web4' 
+  | 'principles' 
+  | 'now' 
+  | 'marketing-systems'
+  | 'cybersecurity-is-mostly-human-design'
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 
@@ -37,8 +46,8 @@ const F = {
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const ARTICLES = [
-  {
-    id: 1,
+ {
+    id: 'marketing-systems',
     title: "Why Marketing Is Really a Systems Problem",
     date: "July 2026",
     category: "Marketing · Systems · By IK Aminu",
@@ -46,13 +55,14 @@ const ARTICLES = [
     readTime: "8 min read",
     featured: true,
   },
- {
+  {
     id: 'cybersecurity-is-mostly-human-design',
     title: 'Cybersecurity is mostly human design',
     date: 'August 2026',
-    readTime: '5 min read',
+    category: 'Cybersecurity · Systems · By IK Aminu',
     excerpt: 'Designing for human limitations, instead of pretending they don’t exist, is where real cybersecurity begins.',
-    component: CybersecurityIsMostlyHumanDesign
+    readTime: '5 min read',
+    featured: false,
   },
   {
     id: 3,
