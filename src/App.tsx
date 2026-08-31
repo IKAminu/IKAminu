@@ -7,6 +7,7 @@ import horizontal1Img from './horizontal1.png';
 import img5Img from './img5.png';
 import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem';
 import { CybersecurityIsMostlyHumanDesign } from './Cybersecurity_is_mostly_human_design';
+import TheHiddenCostOfPoorBusinessSystems from './the-hidden-cost-of-poor-business-systems';
 
 // ── Types ─────────────────────────────────────────────────────────────────────-
 
@@ -20,6 +21,7 @@ type Page =
   | 'now' 
   | 'marketing-systems'
   | 'cybersecurity-is-mostly-human-design'
+  | 'hidden-cost-of-poor-business-systems'
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 
@@ -65,12 +67,12 @@ const ARTICLES = [
     featured: false,
   },
   {
-    id: 3,
-    title: "Why Businesses Fail Because of Systems, Not People",
-    date: "June 2026",
-    category: "Business · Leadership · By IK Aminu",
-    excerpt: "We fire people when we should redesign processes. Most organizational failure is a failure of system design, not individual performance.",
-    readTime: "7 min read",
+    id: 'hidden-cost-of-poor-business-systems',
+    title: 'The Hidden Cost of Poor Business Systems',
+    date: 'August 2026',
+    category: 'Business · Systems · By IK Aminu',
+    excerpt: 'Poor business systems rarely fail dramatically. They create friction, waste time, consume attention, and quietly turn small inefficiencies into significant operating costs.',
+    readTime: '8 min read',
     featured: false,
   },
   {
@@ -1742,6 +1744,7 @@ const renderPage = () => {
     case 'now': return <NowPage />
     case 'marketing-systems': return <WhyMarketingArticle />
     case 'cybersecurity-is-mostly-human-design': return <CybersecurityIsMostlyHumanDesign />
+    case 'hidden-cost-of-poor-business-systems': return <TheHiddenCostOfPoorBusinessSystems />
     default: return <HomePage setPage={setCurrentPage} />
   }
 }
