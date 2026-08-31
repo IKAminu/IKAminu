@@ -1733,6 +1733,18 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [currentPage])
 
+  // Allow article components to navigate through the same React page state as the main navigation.
+  // This avoids fragile DOM button clicks and keeps all article navigation inside the SPA.
+  useEffect(() => {
+    const handleSiteNavigation = (event: Event) => {
+      const page = (event as CustomEvent<Page>).detail
+      if (page) setCurrentPage(page)
+    }
+
+    window.addEventListener('site:navigate', handleSiteNavigation)
+    return () => window.removeEventListener('site:navigate', handleSiteNavigation)
+  }, [])
+
 const renderPage = () => {
   switch (currentPage) {
     case 'home': return <HomePage setPage={setCurrentPage} />

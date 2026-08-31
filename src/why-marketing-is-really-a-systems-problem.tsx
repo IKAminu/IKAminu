@@ -26,22 +26,12 @@ export default function WhyMarketingIsASystemsProblem() {
     window.scrollTo(0, 0)
   }, [])
 
-  const goToWriting = () => {
-    const button = Array.from(document.querySelectorAll('button')).find(
-      (el) => el.textContent?.trim() === 'Writing'
-    ) as HTMLButtonElement | undefined
-    button?.click()
+  const navigate = (page: 'writing' | 'cybersecurity-is-mostly-human-design') => {
+    window.dispatchEvent(new CustomEvent('site:navigate', { detail: page }))
   }
 
-  const goToCybersecurity = () => {
-    goToWriting()
-    window.setTimeout(() => {
-      const button = Array.from(document.querySelectorAll('button')).find(
-        (el) => el.textContent?.includes('Cybersecurity is mostly human design')
-      ) as HTMLButtonElement | undefined
-      button?.click()
-    }, 100)
-  }
+  const goToWriting = () => navigate('writing')
+  const goToCybersecurity = () => navigate('cybersecurity-is-mostly-human-design')
 
 return (
   <div style={{ backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '120px 24px 80px' }}>
@@ -54,7 +44,7 @@ return (
       
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
           <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>
-            Marketing Systems By IK Aminu
+            Marketing · Systems · By IK Aminu
           </span>
           <span style={{ color: C.muted }}>•</span>
           <span style={{ fontFamily: F.body, fontSize: '13px', color: C.muted }}>

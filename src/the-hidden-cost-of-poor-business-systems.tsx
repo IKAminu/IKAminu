@@ -51,12 +51,12 @@ export default function TheHiddenCostOfPoorBusinessSystems() {
     window.scrollTo(0, 0)
   }, [])
 
-  const goToWriting = () => {
-    const button = Array.from(document.querySelectorAll('button')).find(
-      (el) => el.textContent?.trim() === 'Writing'
-    ) as HTMLButtonElement | undefined
-    button?.click()
+  const navigate = (page: 'writing' | 'competence-is-designed') => {
+    window.dispatchEvent(new CustomEvent('site:navigate', { detail: page }))
   }
+
+  const goToWriting = () => navigate('writing')
+  const goToNextArticle = () => navigate('competence-is-designed')
 
   return (
     <article style={{ maxWidth: '760px', margin: '0 auto', padding: '120px 24px 100px' }}>
@@ -257,6 +257,21 @@ export default function TheHiddenCostOfPoorBusinessSystems() {
           </p>
         </div>
       </div>
+
+      <footer style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid rgba(237, 232, 225, 0.08)' }}>
+        <div style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#7a7772', marginBottom: '16px' }}>
+          Up Next
+        </div>
+        <button
+          type="button"
+          onClick={goToNextArticle}
+          style={{ display: 'block', width: '100%', textAlign: 'left', background: '#111111', border: '1px solid rgba(237, 232, 225, 0.08)', padding: '28px', cursor: 'pointer', color: '#ede8e1' }}
+        >
+          <span style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '11px', color: '#16a374', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Essay</span>
+          <h3 style={{ fontFamily: "'Gloock', Georgia, serif", fontSize: '22px', margin: '8px 0', fontWeight: 400 }}>Competence Is Designed →</h3>
+          <p style={{ fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '14px', color: '#a09b96', margin: 0 }}>Consistent performance is built through systems, feedback, and deliberate constraints.</p>
+        </button>
+      </footer>
     </article>
   )
 }

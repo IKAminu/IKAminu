@@ -6,25 +6,15 @@ export const CybersecurityIsMostlyHumanDesign: React.FC = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const goToWriting = () => {
-    const button = Array.from(document.querySelectorAll('button')).find(
-      (el) => el.textContent?.trim() === 'Writing'
-    ) as HTMLButtonElement | undefined
-    button?.click()
+  const navigate = (page: 'writing' | 'hidden-cost-of-poor-business-systems') => {
+    window.dispatchEvent(new CustomEvent('site:navigate', { detail: page }))
   }
 
-  const goToHiddenCost = () => {
-    goToWriting()
-    window.setTimeout(() => {
-      const button = Array.from(document.querySelectorAll('button')).find(
-        (el) => el.textContent?.includes('The Hidden Cost of Poor Business Systems')
-      ) as HTMLButtonElement | undefined
-      button?.click()
-    }, 100)
-  }
+  const goToWriting = () => navigate('writing')
+  const goToHiddenCost = () => navigate('hidden-cost-of-poor-business-systems')
 
   return (
-    <article className="max-w-3xl mx-auto px-4 pt-32 pb-20 text-slate-200 font-sans leading-relaxed">
+    <article className="max-w-3xl mx-auto px-4 pt-44 pb-20 text-slate-200 font-sans leading-relaxed">
       {/* Header / Meta */}
       <header className="mb-10 pb-6 border-b border-slate-800">
         <button type="button" onClick={goToWriting} className="inline-flex items-center gap-2 mb-10 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-400 hover:text-emerald-300 transition-colors">
