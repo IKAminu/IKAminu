@@ -26,35 +26,31 @@ export default function WhyMarketingIsASystemsProblem() {
     window.scrollTo(0, 0)
   }, [])
 
+  const goToWriting = () => {
+    const button = Array.from(document.querySelectorAll('button')).find(
+      (el) => el.textContent?.trim() === 'Writing'
+    ) as HTMLButtonElement | undefined
+    button?.click()
+  }
+
+  const goToCybersecurity = () => {
+    goToWriting()
+    window.setTimeout(() => {
+      const button = Array.from(document.querySelectorAll('button')).find(
+        (el) => el.textContent?.includes('Cybersecurity is mostly human design')
+      ) as HTMLButtonElement | undefined
+      button?.click()
+    }, 100)
+  }
+
 return (
   <div style={{ backgroundColor: C.bg, minHeight: '100vh', color: C.text, fontFamily: F.body, padding: '120px 24px 80px' }}>
     
     {/* Top Header / Back Navigation */}
     <header style={{ maxWidth: '760px', margin: '0 auto 60px' }}>
-      <a
-        href="#writing"
-        onClick={(e) => {
-          e.preventDefault();
-          if (onBack) onBack(); // or setPage('writing') depending on how you pass props
-        }}
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '8px',
-          fontFamily: F.body,
-          fontSize: '12px',
-          fontWeight: 600,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          color: C.emeraldBright,
-          textDecoration: 'none',
-          marginBottom: '40px',
-          transition: 'opacity 0.2s',
-          cursor: 'pointer'
-        }}
-      >
+      <button type="button" onClick={goToWriting} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontFamily: F.body, fontSize: '12px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright, background: 'transparent', border: 0, padding: 0, marginBottom: '40px', cursor: 'pointer' }}>
         ← Back to Writing
-      </a>
+      </button>
       
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
           <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>
@@ -261,9 +257,8 @@ return (
           Up Next
         </span>
         
-        <a
-          href="/writing/cybersecurity-is-mostly-human-design"
-          style={{
+        <button type="button" onClick={goToCybersecurity} style={{ display: 'block', width: '100%', textAlign: 'left', background: 'transparent', border: 0, padding: 0, cursor: 'pointer' }}>
+          <div style={{
             display: 'block',
             backgroundColor: C.surfaceAlt,
             border: `1px solid ${C.border}`,
@@ -282,7 +277,8 @@ return (
           <p style={{ fontSize: '14px', color: C.mutedLight, margin: 0 }}>
             The weakest link in any security system isn't the firewall. It's the behavior pattern of the people operating within it.
           </p>
-        </a>
+          </div>
+        </button>
       </footer>
 
     </div>

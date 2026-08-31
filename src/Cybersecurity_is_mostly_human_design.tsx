@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const CybersecurityIsMostlyHumanDesign: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Cybersecurity is mostly human design | IK Aminu'
+    window.scrollTo(0, 0)
+  }, [])
+
+  const goToWriting = () => {
+    const button = Array.from(document.querySelectorAll('button')).find(
+      (el) => el.textContent?.trim() === 'Writing'
+    ) as HTMLButtonElement | undefined
+    button?.click()
+  }
+
+  const goToHiddenCost = () => {
+    goToWriting()
+    window.setTimeout(() => {
+      const button = Array.from(document.querySelectorAll('button')).find(
+        (el) => el.textContent?.includes('The Hidden Cost of Poor Business Systems')
+      ) as HTMLButtonElement | undefined
+      button?.click()
+    }, 100)
+  }
+
   return (
-    <article className="max-w-3xl mx-auto px-4 py-12 text-slate-200 font-sans leading-relaxed">
+    <article className="max-w-3xl mx-auto px-4 pt-32 pb-20 text-slate-200 font-sans leading-relaxed">
       {/* Header / Meta */}
       <header className="mb-10 pb-6 border-b border-slate-800">
-        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
-          Cybersecurity is mostly human design
-        </h1>
-        <div className="flex items-center gap-4 text-sm text-slate-400">
-          <span>By IK Aminu</span>
+        <button type="button" onClick={goToWriting} className="inline-flex items-center gap-2 mb-10 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-400 hover:text-emerald-300 transition-colors">
+          ← Back to Writing
+        </button>
+        <div className="flex items-center gap-3 text-sm text-slate-400 mb-5 flex-wrap">
+          <span className="text-emerald-400 uppercase tracking-[0.12em] text-[11px]">Cybersecurity · Systems · By IK Aminu</span>
+          <span>•</span>
+          <span>August 2026</span>
           <span>•</span>
           <span>5 min read</span>
         </div>
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+          Cybersecurity is mostly human design
+        </h1>
       </header>
 
       {/* Intro Narrative */}
@@ -163,11 +190,21 @@ export const CybersecurityIsMostlyHumanDesign: React.FC = () => {
       </section>
 
       {/* Takeaway / Principle Box */}
-      <footer className="bg-gradient-to-r from-slate-900 to-emerald-950/60 border border-emerald-500/30 p-6 rounded-xl text-center">
-        <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">Core Principle</p>
-        <blockquote className="text-xl md:text-2xl font-bold text-white italic">
-          "Security isn't built by expecting perfect people. It's built by designing for imperfect ones."
-        </blockquote>
+      <footer className="mt-12 space-y-8">
+        <div className="bg-gradient-to-r from-slate-900 to-emerald-950/60 border border-emerald-500/30 p-6 rounded-xl text-center">
+          <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">Core Principle</p>
+          <blockquote className="text-xl md:text-2xl font-bold text-white italic">
+            "Security isn't built by expecting perfect people. It's built by designing for imperfect ones."
+          </blockquote>
+        </div>
+        <div className="border-t border-slate-800 pt-8">
+          <p className="text-xs uppercase tracking-[0.12em] text-slate-500 mb-4">Up Next</p>
+          <button type="button" onClick={goToHiddenCost} className="w-full text-left bg-slate-900 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-lg transition-colors">
+            <span className="text-[11px] uppercase tracking-[0.1em] text-emerald-400">Business Systems</span>
+            <h3 className="text-xl md:text-2xl font-semibold text-white mt-2">The Hidden Cost of Poor Business Systems →</h3>
+            <p className="text-sm text-slate-400 mt-2">How small inefficiencies quietly consume time, attention, and opportunity.</p>
+          </button>
+        </div>
       </footer>
     </article>
   );

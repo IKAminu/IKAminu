@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const bodyStyle: React.CSSProperties = {
   fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -46,9 +46,24 @@ function PrincipleCallout({ children }: { children: React.ReactNode }) {
 }
 
 export default function TheHiddenCostOfPoorBusinessSystems() {
+  useEffect(() => {
+    document.title = 'The Hidden Cost of Poor Business Systems | IK Aminu'
+    window.scrollTo(0, 0)
+  }, [])
+
+  const goToWriting = () => {
+    const button = Array.from(document.querySelectorAll('button')).find(
+      (el) => el.textContent?.trim() === 'Writing'
+    ) as HTMLButtonElement | undefined
+    button?.click()
+  }
+
   return (
     <article style={{ maxWidth: '760px', margin: '0 auto', padding: '120px 24px 100px' }}>
       <header style={{ marginBottom: '64px' }}>
+        <button type="button" onClick={goToWriting} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontFamily: "'DM Sans', system-ui, sans-serif", fontSize: '12px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#16a374', background: 'transparent', border: 0, padding: 0, cursor: 'pointer', marginBottom: '40px' }}>
+          ← Back to Writing
+        </button>
         <div style={{
           fontFamily: "'DM Sans', system-ui, sans-serif",
           fontSize: '11px',
