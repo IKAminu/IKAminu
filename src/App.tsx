@@ -1759,6 +1759,7 @@ const renderPage = () => {
     case 'marketing-systems': return <WhyMarketingArticle />
     case 'cybersecurity-is-mostly-human-design': return <CybersecurityIsMostlyHumanDesign />
     case 'hidden-cost-of-poor-business-systems': return <TheHiddenCostOfPoorBusinessSystems />
+    case 'competence-is-designed': return <CompetenceIsDesigned />
     default: return <HomePage setPage={setCurrentPage} />
   }
 }
