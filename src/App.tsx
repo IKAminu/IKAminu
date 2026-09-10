@@ -8,6 +8,7 @@ import img5Img from './img5.png';
 import WhyMarketingArticle from './why-marketing-is-really-a-systems-problem';
 import { CybersecurityIsMostlyHumanDesign } from './Cybersecurity_is_mostly_human_design';
 import TheHiddenCostOfPoorBusinessSystems from './the-hidden-cost-of-poor-business-systems';
+import CompetenceIsDesigned from './competence-is-designed';
 
 // ── Types ─────────────────────────────────────────────────────────────────────-
 
@@ -22,6 +23,7 @@ type Page =
   | 'marketing-systems'
   | 'cybersecurity-is-mostly-human-design'
   | 'hidden-cost-of-poor-business-systems'
+  | 'competence-is-designed'
 
 // ── Design tokens ─────────────────────────────────────────────────────────────
 
@@ -76,12 +78,12 @@ const ARTICLES = [
     featured: false,
   },
   {
-    id: 4,
+    id: 'competence-is-designed',
     title: "Competence Is Designed",
-    date: "May 2026",
+    date: "September 2026",
     category: "Leadership · Excellence · By IK Aminu",
-    excerpt: "Consistent high performance isn't a personality trait. It's the result of systems, feedback loops, and deliberate constraints built over time.",
-    readTime: "5 min read",
+    excerpt: "Consistent high performance isn't a personality trait. It's the result of systems, feedback loops, and deliberate practice built over time.",
+    readTime: "8 min read",
     featured: false,
   },
   {
