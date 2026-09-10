@@ -437,7 +437,7 @@ function Footer() {
         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           {[
             { label: 'WA', href: 'https://wa.me/234XXXXXXXXXX' },
-            { label: 'LN', href: 'https://linkedin.com/in/YOUR_USERNAME' },
+            { label: 'LN', href: 'https://www.linkedin.com/in/i-k-aminu-174317403' },
             { label: 'X', href: 'https://x.com/YOUR_USERNAME' },
             { label: 'IG', href: 'https://instagram.com/YOUR_USERNAME' }
           ].map(({ label, href }) => (
@@ -906,7 +906,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             onMouseEnter={e => e.currentTarget.style.color = C.emeraldBright}
             onMouseLeave={e => e.currentTarget.style.color = C.text}
           >
-            ikaminumail@gmail.com
+            hello@ikaminu.cc.cd
           </a>
           
           <div style={{ display: 'flex', gap: '28px', marginTop: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
