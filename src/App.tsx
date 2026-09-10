@@ -924,7 +924,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/IKaminu"
+              href="https://www.linkedin.com/in/i-k-aminu-174317403"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted, transition: 'color 0.2s ease' }}
