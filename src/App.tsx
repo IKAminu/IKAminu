@@ -895,7 +895,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
           <a
-            href="mailto:ikaminumail@gmail.com"
+            href="mailto:hello@ikaminu.cc.cd"
             style={{
               fontFamily: F.display,
               fontSize: '22px',
@@ -1598,7 +1598,7 @@ function Web4Page() {
             We work with a small number of clients at a time. Reach out to start the conversation.
           </p>
           <a
-            href="mailto:ikaminumail@gmail.com"
+            href="mailto:hello@ikaminu.cc.cd"
             style={{
               fontFamily: F.body, fontSize: '13px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase',
               color: C.text, padding: '14px 32px', backgroundColor: C.emerald,
