@@ -42,14 +42,13 @@ const renderHead = (route) => {
 
 for (const route of pageRoutes) {
   const html = template
-    .replace(/<title>[\s\S]*?<\/title>/, renderHead(route))
+    .replace(/<title>[\s\S]*?<\/title>/, '')
     .replace(/<meta name="description"[^>]*>/, '')
-    .replace(/<meta property="og:title"[^>]*>/, '')
-    .replace(/<meta property="og:description"[^>]*>/, '')
-    .replace(/<meta property="og:url"[^>]*>/, '')
-    .replace(/<meta property="og:type"[^>]*>/, '')
     .replace(/<link rel="canonical"[^>]*>/, '')
-    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')
+    .replace(/<meta property="og:[^>]*>/g, '')
+    .replace(/<meta name="twitter:[^>]*>/g, '')
+    .replace(/<script type="application\\/ld\\+json">[\s\S]*?<\\/script>/, '')
+    .replace('</head>', '    ' + renderHead(route) + '\\n  </head>')
     .replace('<div id="root"></div>', `<div id="root">${renderPage(route.page)}</div>`)
 
   const outDir = path.join(dist, route.path === '/' ? '' : route.path)
