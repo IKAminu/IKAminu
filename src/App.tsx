@@ -12,7 +12,7 @@ import CompetenceIsDesigned from './competence-is-designed';
 
 // ── Types ─────────────────────────────────────────────────────────────────────-
 
-type Page = 
+export type Page = 
   | 'home' 
   | 'about' 
   | 'writing' 
@@ -1728,8 +1728,8 @@ function NowPage() {
 
 // ── App ───────────────────────────────────────────────────────────────────────
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home')
+export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
+  const [currentPage, setCurrentPage] = useState<Page>(initialPage)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
