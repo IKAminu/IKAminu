@@ -1735,16 +1735,43 @@ export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [currentPage])
 
-  // Allow article components to navigate through the same React page state as the main navigation.
-  // This avoids fragile DOM button clicks and keeps all article navigation inside the SPA.
+  const pageToPath: Record<Page, string> = {
+    home: '/',
+    about: '/about/',
+    writing: '/writing/',
+    projects: '/projects/',
+    web4: '/web4/',
+    principles: '/principles/',
+    now: '/now/',
+    'marketing-systems': '/writing/why-marketing-is-really-a-systems-problem/',
+    'cybersecurity-is-mostly-human-design': '/writing/cybersecurity-is-mostly-human-design/',
+    'hidden-cost-of-poor-business-systems': '/writing/hidden-cost-of-poor-business-systems/',
+    'competence-is-designed': '/writing/competence-is-designed/',
+  }
+
   useEffect(() => {
     const handleSiteNavigation = (event: Event) => {
       const page = (event as CustomEvent<Page>).detail
-      if (page) setCurrentPage(page)
+      if (!page) return
+      setCurrentPage(page)
+      const nextPath = pageToPath[page]
+      if (nextPath && window.location.pathname !== nextPath) {
+        window.history.pushState({ page }, '', nextPath)
+      }
+    }
+
+    const handlePopState = () => {
+      const currentPath = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/'
+      const page = (Object.entries(pageToPath).find(([, path]) => path === currentPath)?.[0] ?? 'home') as Page
+      setCurrentPage(page)
     }
 
     window.addEventListener('site:navigate', handleSiteNavigation)
-    return () => window.removeEventListener('site:navigate', handleSiteNavigation)
+    window.addEventListener('popstate', handlePopState)
+    return () => {
+      window.removeEventListener('site:navigate', handleSiteNavigation)
+      window.removeEventListener('popstate', handlePopState)
+    }
   }, [])
 
 const renderPage = () => {
