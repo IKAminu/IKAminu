@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ikaminu.cc.cd/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://ikaminu.cc.cd/about/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/writing/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/projects/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/web4/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/principles/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/now/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/writing/why-marketing-is-really-a-systems-problem/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/writing/cybersecurity-is-mostly-human-design/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/writing/hidden-cost-of-poor-business-systems/</loc></url>
+  <url><loc>https://ikaminu.cc.cd/writing/competence-is-designed/</loc></url>
 </urlset>
