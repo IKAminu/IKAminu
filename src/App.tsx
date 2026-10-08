@@ -230,6 +230,20 @@ function ImagePlaceholder({ aspectRatio = '4/5' }: { aspectRatio?: string }) {
 
 // ── Nav ───────────────────────────────────────────────────────────────────────
 
+const PAGE_PATHS: Record<Page, string> = {
+  home: '/',
+  about: '/about/',
+  writing: '/writing/',
+  projects: '/projects/',
+  web4: '/web4/',
+  principles: '/principles/',
+  now: '/now/',
+  'marketing-systems': '/writing/why-marketing-is-really-a-systems-problem/',
+  'cybersecurity-is-mostly-human-design': '/writing/cybersecurity-is-mostly-human-design/',
+  'hidden-cost-of-poor-business-systems': '/writing/hidden-cost-of-poor-business-systems/',
+  'competence-is-designed': '/writing/competence-is-designed/',
+}
+
 function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) => void }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -316,9 +330,13 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
             alignItems: 'center' 
           }}>
             {navLinks.map(({ label, page }) => (
-              <button
+              <a
                 key={page}
-                onClick={() => handleNav(page)}
+                href={PAGE_PATHS[page]}
+                onClick={(event) => {
+                  event.preventDefault()
+                  handleNav(page)
+                }}
                 style={{
                   fontFamily: F.body,
                   fontSize: '12px',
@@ -335,7 +353,7 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
                 onMouseLeave={e => { if (currentPage !== page) e.currentTarget.style.color = C.muted }}
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -379,9 +397,13 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
             gap: '20px',
           }}>
             {navLinks.map(({ label, page }) => (
-              <button
+              <a
                 key={page}
-                onClick={() => handleNav(page)}
+                href={PAGE_PATHS[page]}
+                onClick={(event) => {
+                  event.preventDefault()
+                  handleNav(page)
+                }}
                 style={{
                   fontFamily: F.body,
                   fontSize: '14px',
@@ -397,7 +419,7 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
                 }}
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
         )}
@@ -1735,51 +1757,33 @@ export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [currentPage])
 
-  const pageToPath: Record<Page, string> = {
-    home: '/',
-    about: '/about/',
-    writing: '/writing/',
-    projects: '/projects/',
-    web4: '/web4/',
-    principles: '/principles/',
-    now: '/now/',
-    'marketing-systems': '/writing/why-marketing-is-really-a-systems-problem/',
-    'cybersecurity-is-mostly-human-design': '/writing/cybersecurity-is-mostly-human-design/',
-    'hidden-cost-of-poor-business-systems': '/writing/hidden-cost-of-poor-business-systems/',
-    'competence-is-designed': '/writing/competence-is-designed/',
-  }
-
   useEffect(() => {
-    const handleSiteNavigation = (event: Event) => {
-      const page = (event as CustomEvent<Page>).detail
-      if (!page) return
-      setCurrentPage(page)
-      const nextPath = pageToPath[page]
-      if (nextPath && window.location.pathname !== nextPath) {
-        window.history.pushState({ page }, '', nextPath)
-      }
-    }
-
     const handlePopState = () => {
       const currentPath = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/'
-      const page = (Object.entries(pageToPath).find(([, path]) => path === currentPath)?.[0] ?? 'home') as Page
+      const page = (Object.entries(PAGE_PATHS).find(([, path]) => path === currentPath)?.[0] ?? 'home') as Page
       setCurrentPage(page)
     }
 
-    window.addEventListener('site:navigate', handleSiteNavigation)
     window.addEventListener('popstate', handlePopState)
     return () => {
-      window.removeEventListener('site:navigate', handleSiteNavigation)
       window.removeEventListener('popstate', handlePopState)
     }
   }, [])
 
-const renderPage = () => {
+  const navigateToPage = (page: Page) => {
+    setCurrentPage(page)
+    const nextPath = PAGE_PATHS[page]
+    if (nextPath && window.location.pathname !== nextPath) {
+      window.history.pushState({ page }, '', nextPath)
+    }
+  }
+
+  const renderPage = () => {
   switch (currentPage) {
-    case 'home': return <HomePage setPage={setCurrentPage} />
-    case 'about': return <AboutPage setPage={setCurrentPage} />
-    case 'writing': return <WritingPage setPage={setCurrentPage} />
-    case 'projects': return <ProjectsPage setPage={setCurrentPage} />
+    case 'home': return <HomePage setPage={navigateToPage} />
+    case 'about': return <AboutPage setPage={navigateToPage} />
+    case 'writing': return <WritingPage setPage={navigateToPage} />
+    case 'projects': return <ProjectsPage setPage={navigateToPage} />
     case 'web4': return <Web4Page />
     case 'principles': return <PrinciplesPage />
     case 'now': return <NowPage />
@@ -1787,7 +1791,7 @@ const renderPage = () => {
     case 'cybersecurity-is-mostly-human-design': return <CybersecurityIsMostlyHumanDesign />
     case 'hidden-cost-of-poor-business-systems': return <TheHiddenCostOfPoorBusinessSystems />
     case 'competence-is-designed': return <CompetenceIsDesigned />
-    default: return <HomePage setPage={setCurrentPage} />
+    default: return <HomePage setPage={navigateToPage} />
   }
 }
   return (
@@ -1798,7 +1802,7 @@ const renderPage = () => {
       display: 'flex',
       flexDirection: 'column' // Sets up a vertical stack structure
     }}>
-      <Nav currentPage={currentPage} setPage={setCurrentPage} />
+      <Nav currentPage={currentPage} setPage={navigateToPage} />
       
       {/* The main content */}
       <main key={currentPage} className="anim-fade-in" style={{ flex: 1 }}>
