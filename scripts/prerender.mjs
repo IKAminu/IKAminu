@@ -47,7 +47,7 @@ for (const route of pageRoutes) {
     .replace(/<link rel="canonical"[^>]*>/, '')
     .replace(/<meta property="og:[^>]*>/g, '')
     .replace(/<meta name="twitter:[^>]*>/g, '')
-    .replace(/<script type="application\\/ld\\+json">[\s\S]*?<\\/script>/, '')
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '')
     .replace('</head>', '    ' + renderHead(route) + '\\n  </head>')
     .replace('<div id="root"></div>', `<div id="root">${renderPage(route.page)}</div>`)
 
