@@ -154,6 +154,7 @@ const WEB4_SERVICES = [
 ]
 
 const NOW_ITEMS = [
+  "Building an internal agency management system: a connected dashboard for leads, clients, projects, tasks, finances, and day-to-day operations.",
   "Building Web4: developing client systems and internal infrastructure.",
   "Researching AI systems for African businesses and how automation changes competitive advantage in emerging markets.",
   "Writing a series on systems thinking applied to business operations, marketing, and leadership.",
@@ -1499,6 +1500,44 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
                 { label: 'Problem', body: 'Organizations train employees on cybersecurity once, then assume compliance. Habits erode. Risk compounds silently.' },
                 { label: 'Approach', body: 'Automated behavior tracking and nudging creates accountability loops. Compliance becomes measurable rather than assumed.' },
                 { label: 'Outcome', body: 'Repeatable security behaviors embedded into daily workflows. Measurable improvement in compliance posture over time.' },
+              ].map(({ label, body }) => (
+                <div key={label}>
+                  <h4 style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.emeraldBright, marginBottom: '12px' }}>
+                    {label}
+                  </h4>
+                  <p style={{ fontFamily: F.body, fontSize: '14px', color: C.muted, lineHeight: 1.7 }}>
+                    {body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Agency management system */}
+        <div style={{ border: `1px solid ${C.border}`, marginBottom: '24px' }}>
+          <div style={{ padding: '48px 56px', backgroundColor: '#0c160f', borderBottom: `1px solid ${C.border}` }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', marginBottom: '24px' }}>
+              <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>
+                Business Operations · Software
+              </span>
+              <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: C.mutedLight, border: `1px solid ${C.borderMid}`, padding: '7px 10px' }}>
+                In Development
+              </span>
+            </div>
+            <h2 style={{ fontFamily: F.display, fontSize: 'clamp(28px, 3.5vw, 46px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: '-0.02em', color: C.text, marginBottom: '24px' }}>
+              Agency Management System
+            </h2>
+            <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.75, maxWidth: '680px' }}>
+              A lightweight operations platform that brings leads, customer records, projects, bookings, payments, and day-to-day agency workflows into one connected workspace. Designed around practical workflows, clear records, and systems that make operations easier to manage as a business grows.
+            </p>
+          </div>
+          <div style={{ padding: '40px 56px' }}>
+            <div style={{ display: 'grid', gap: '32px' }} className="md:grid-cols-3">
+              {[
+                { label: 'Purpose', body: 'Replace scattered spreadsheets and disconnected tools with one reliable operational workspace.' },
+                { label: 'Approach', body: 'A responsive dashboard, structured records, connected workflows, and a Supabase-backed data layer.' },
+                { label: 'Current Stage', body: 'Core interface and workflows are being built. Data persistence and external integrations are being connected in stages.' },
               ].map(({ label, body }) => (
                 <div key={label}>
                   <h4 style={{ fontFamily: F.body, fontSize: '12px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: C.emeraldBright, marginBottom: '12px' }}>
