@@ -34,6 +34,12 @@ export const pageRoutes: Array<{
     description: 'Selected projects by IK Aminu across cybersecurity, web applications, business systems, automation and digital operations.',
   },
   {
+    path: '/resources/',
+    page: 'resources',
+    title: 'Resources & Free Guides | IK Aminu',
+    description: 'Practical guides, frameworks and resources by IK Aminu, starting with a beginner-friendly guide to running Meta Ads.',
+  },
+  {
     path: '/web4/',
     page: 'web4',
     title: 'WEB4 | Systems, Automation & Digital Operations',
