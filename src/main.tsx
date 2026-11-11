@@ -8,6 +8,7 @@ const pathToPage: Record<string, Page> = {
   '/about/': 'about',
   '/writing/': 'writing',
   '/projects/': 'projects',
+  '/resources/': 'resources',
   '/web4/': 'web4',
   '/principles/': 'principles',
   '/now/': 'now',
