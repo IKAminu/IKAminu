@@ -17,6 +17,7 @@ export type Page =
   | 'about' 
   | 'writing' 
   | 'projects' 
+  | 'resources'
   | 'web4' 
   | 'principles' 
   | 'now' 
@@ -236,6 +237,7 @@ const PAGE_PATHS: Record<Page, string> = {
   about: '/about/',
   writing: '/writing/',
   projects: '/projects/',
+  resources: '/resources/',
   web4: '/web4/',
   principles: '/principles/',
   now: '/now/',
@@ -271,6 +273,7 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
     { label: 'About', page: 'about' },
     { label: 'Writing', page: 'writing' },
     { label: 'Projects', page: 'projects' },
+    { label: 'Resources', page: 'resources' },
     { label: 'Web4', page: 'web4' },
     { label: 'Principles', page: 'principles' },
     { label: 'Now', page: 'now' },
@@ -1787,6 +1790,54 @@ function NowPage() {
   )
 }
 
+// ── Resources Page ────────────────────────────────────────────────────────────
+
+function ResourcesPage() {
+  return (
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
+      <div className="anim-fade-in">
+        <SectionLabel>Resources</SectionLabel>
+        <h1 style={{ fontFamily: F.display, fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.025em', color: C.text, marginBottom: '24px' }}>
+          Practical tools. <em style={{ color: C.emeraldBright }}>Free to use.</em>
+        </h1>
+        <p style={{ fontFamily: F.body, fontSize: '16px', color: C.muted, maxWidth: '600px', lineHeight: 1.75, marginBottom: '72px' }}>
+          Guides, frameworks, and useful resources built to make practical work easier. Download them, use them, and share them.
+        </p>
+
+        <div style={{ border: `1px solid ${C.border}`, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))' }}>
+          <div style={{ minHeight: '280px', padding: '36px', backgroundColor: '#0c160f', borderRight: `1px solid ${C.border}`, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>01 · Marketing · PDF Guide</span>
+              <div style={{ fontFamily: F.display, fontSize: 'clamp(26px, 3vw, 34px)', color: C.text, lineHeight: 1.2, marginTop: '28px' }}>The Beginner's Guide to Meta Ads</div>
+            </div>
+            <div style={{ fontFamily: F.body, fontSize: '12px', color: C.muted, marginTop: '32px' }}>A step-by-step guide to setting up, launching, and managing your first Meta ad campaign.</div>
+          </div>
+          <div style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '28px' }}>
+            <div>
+              <span style={{ fontFamily: F.body, fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: C.muted }}>For beginners</span>
+              <p style={{ fontFamily: F.body, fontSize: '14px', color: C.mutedLight, lineHeight: 1.8, marginTop: '16px' }}>
+                Covers the process from the initial setup through campaign creation and launch, with practical guidance on what to select and what to avoid.
+              </p>
+            </div>
+            <a
+              href="/downloads/meta-ads-beginners-guide.pdf"
+              download="Meta-Ads-Beginners-Guide.pdf"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', alignSelf: 'flex-start', padding: '14px 20px', border: `1px solid ${C.emeraldBright}`, color: C.text, fontFamily: F.body, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', textDecoration: 'none', transition: 'background-color 0.2s ease, color 0.2s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = C.emeraldBright; e.currentTarget.style.color = '#0b0b0b' }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = C.text }}
+            >
+              Download PDF <span aria-hidden="true" style={{ marginLeft: '12px' }}>↓</span>
+            </a>
+          </div>
+        </div>
+        <p style={{ fontFamily: F.body, fontSize: '12px', color: C.muted, marginTop: '24px', lineHeight: 1.7 }}>
+          More resources will be added here as they are published.
+        </p>
+      </div>
+    </div>
+  )
+}
+
 // ── App ───────────────────────────────────────────────────────────────────────
 
 export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
@@ -1823,6 +1874,7 @@ export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
     case 'about': return <AboutPage setPage={navigateToPage} />
     case 'writing': return <WritingPage setPage={navigateToPage} />
     case 'projects': return <ProjectsPage setPage={navigateToPage} />
+    case 'resources': return <ResourcesPage />
     case 'web4': return <Web4Page />
     case 'principles': return <PrinciplesPage />
     case 'now': return <NowPage />
