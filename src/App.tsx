@@ -156,7 +156,7 @@ const WEB4_SERVICES = [
 
 const NOW_ITEMS = [
   "Building an internal agency management system: a connected dashboard for leads, clients, projects, tasks, finances, and day-to-day operations.",
-  "Building Web4: developing client systems and internal infrastructure.",
+  "Building Web7: developing client systems and internal infrastructure.",
   "Researching AI systems for African businesses and how automation changes competitive advantage in emerging markets.",
   "Writing a series on systems thinking applied to business operations, marketing, and leadership.",
   "Laying the groundwork for a long-term holding company structure across technology, media, and services.",
@@ -274,7 +274,7 @@ function Nav({ currentPage, setPage }: { currentPage: Page; setPage: (p: Page) =
     { label: 'Writing', page: 'writing' },
     { label: 'Projects', page: 'projects' },
     { label: 'Resources', page: 'resources' },
-    { label: 'Web4', page: 'web4' },
+    { label: 'Web7', page: 'web4' },
     { label: 'Principles', page: 'principles' },
     { label: 'Now', page: 'now' },
   ]
@@ -551,7 +551,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
                 marginBottom: '48px',
               }}
             >
-              Founder of Web4. I build systems that help businesses grow through strategy,
+              Founder of Web7 (formerly Web4). I build systems that help businesses grow through strategy,
               AI, marketing, and technology. I also write about the principles behind building
               businesses, people, and organizations that perform consistently over time as well as 
               about Psychology, Philosophy and any other intrest.
@@ -599,7 +599,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
                 onMouseEnter={e => e.currentTarget.style.color = C.text}
                 onMouseLeave={e => e.currentTarget.style.color = C.muted}
               >
-                Explore Web4 →
+                Explore Web7 →
               </button>
             </div>
           </div>
@@ -650,7 +650,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8, marginBottom: '32px' }}>
               That formative view of a person applying accumulated expertise to build something
               systematic, real and lasting shaped how I think about business, leadership, and growth.
-              I've carried that lens into Web4 and every system I've built since...
+              I've carried that lens into Web7, formerly Web4, and every system I've built since...
             </p>
             <button
               onClick={() => setPage('about')}
@@ -789,7 +789,7 @@ function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               body: "A system that transforms unsafe cybersecurity habits into measurable, repeatable behaviors through automation and continuous monitoring.",
             },
             {
-              title: "Web4",
+              title: "Web7",
               tag: "Growth Systems · Company",
               body: "A growth systems company built to help businesses scale through AI automation, brand strategy, marketing systems, and digital infrastructure.",
             },
@@ -1095,7 +1095,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
             {/* Meta Table Items directly underneath image */}
             <div style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                { label: 'Company', value: 'Web4' },
+                { label: 'Company', value: 'Web7' },
                 { label: 'Focus', value: 'Business Systems' },
                 { label: 'Location', value: 'Nigeria' },
               ].map(({ label, value }) => (
@@ -1160,7 +1160,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
               of the quality of the systems the people inside them choose to build.
             </p>
             <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.8 }}>
-              I founded Web4 with a simple conviction: that most businesses have more growth
+              I founded Web7, formerly Web4, with a simple conviction: that most businesses have more growth
               potential than they're currently accessing, and that the gap is almost always systemic.
               We close that gap through marketing systems, AI automation, brand strategy, and
               digital infrastructure. Built deliberately, geared specially towards each individual system.
@@ -1244,7 +1244,7 @@ function AboutPage({ setPage }: { setPage: (p: Page) => void }) {
             onMouseEnter={e => e.currentTarget.style.backgroundColor = C.emeraldBright}
             onMouseLeave={e => e.currentTarget.style.backgroundColor = C.emerald}
           >
-            Explore Web4
+            Explore Web7
           </button>
         </div>
 
@@ -1555,7 +1555,7 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
 
-        {/* Web4 project */}
+        {/* Web7 project */}
         <div
           style={{
             border: `1px solid ${C.border}`,
@@ -1573,14 +1573,14 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
                 Growth Systems · Company
               </span>
               <h2 style={{ fontFamily: F.display, fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 400, lineHeight: 1.2, letterSpacing: '-0.02em', color: C.text, marginBottom: '16px' }}>
-                Web4
+                Web7
               </h2>
               <p style={{ fontFamily: F.body, fontSize: '16px', color: C.mutedLight, lineHeight: 1.7, maxWidth: '600px' }}>
                 A growth systems company helping businesses scale through AI automation, brand strategy,
                 marketing systems, and high-performance digital infrastructure.
               </p>
             </div>
-            <span style={{ fontFamily: F.body, fontSize: '13px', color: C.emeraldBright }}>View Web4 →</span>
+            <span style={{ fontFamily: F.body, fontSize: '13px', color: C.emeraldBright }}>View Web7 →</span>
           </div>
         </div>
       </div>
@@ -1588,13 +1588,13 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
   )
 }
 
-// ── Web4 Page ─────────────────────────────────────────────────────────────────
+// ── Web7 Page ─────────────────────────────────────────────────────────────────
 
 function Web4Page() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
       <div className="anim-fade-in">
-        <SectionLabel>Web4</SectionLabel>
+        <SectionLabel>Web7</SectionLabel>
         <div style={{ display: 'grid', gap: '80px', marginBottom: '100px' }} className="md:grid-cols-2">
           <div>
             <h1 style={{ fontFamily: F.display, fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.025em', color: C.text, marginBottom: '32px' }}>
@@ -1602,7 +1602,7 @@ function Web4Page() {
               <br /><em style={{ fontStyle: 'italic', color: C.emeraldBright }}>Company.</em>
             </h1>
             <p style={{ fontFamily: F.body, fontSize: '17px', color: C.mutedLight, lineHeight: 1.8 }}>
-              Web4 exists on a single conviction: that most businesses have more growth potential
+              Web7 exists on a single conviction: that most businesses have more growth potential
               than they're currently accessing. The gap is almost always systemic.
             </p>
           </div>
