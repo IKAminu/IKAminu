@@ -4,7 +4,7 @@ Engineering Competence Through Systems.
 
 This repository contains the source code for my personal website.
 
-I'm the founder of Web7, where I design systems that help businesses grow through strategy, AI, marketing, and technology.
+I'm the founder of Web7 (formerly Web4, rebranded in November 2026), where I design systems that help businesses grow through strategy, AI, marketing, and technology.
 
 The website serves as the central home for my writing, projects, principles, and ongoing work.
 
