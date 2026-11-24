@@ -4,7 +4,7 @@ Engineering Competence Through Systems.
 
 This repository contains the source code for my personal website.
 
-I'm the founder of Web4, where I design systems that help businesses grow through strategy, AI, marketing, and technology.
+I'm the founder of Web7, where I design systems that help businesses grow through strategy, AI, marketing, and technology.
 
 The website serves as the central home for my writing, projects, principles, and ongoing work.
 
@@ -14,7 +14,7 @@ The website serves as the central home for my writing, projects, principles, and
 - Principles
 - Articles
 - Projects
-- Web4
+- Web7
 - Current Focus
 - Contact
 
@@ -25,7 +25,7 @@ The website serves as the central home for my writing, projects, principles, and
 - Marketing Is an Operating System
 
 ## Architecture & Focus
-- **Web4:** Systems design, AI automation, and strategic marketing framework infrastructure.
+- **Web7:** Systems design, AI automation, and strategic marketing framework infrastructure.
 - **Writing:** Documentation of principles, operational discipline, macroeconomics, and organizational execution.
 
 ## Tech Stack
