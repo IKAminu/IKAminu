@@ -1594,7 +1594,7 @@ function Web4Page() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
       <div className="anim-fade-in">
-        <SectionLabel>Web7</SectionLabel>
+        <SectionLabel>Web7 · Formerly Web4</SectionLabel>
         <div style={{ display: 'grid', gap: '80px', marginBottom: '100px' }} className="md:grid-cols-2">
           <div>
             <h1 style={{ fontFamily: F.display, fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.025em', color: C.text, marginBottom: '32px' }}>
