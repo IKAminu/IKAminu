@@ -131,7 +131,7 @@ const PRINCIPLES = [
   },
  ]
 
-const WEB4_SERVICES = [
+const WEB7_SERVICES = [
   {
     title: "AI Automation",
     body: "We design and deploy AI systems that eliminate repetitive work, accelerate decision-making, and free your team to focus on what compounds.",
@@ -1590,10 +1590,14 @@ function ProjectsPage({ setPage }: { setPage: (p: Page) => void }) {
 
 // ── Web7 Page ─────────────────────────────────────────────────────────────────
 
-function Web4Page() {
+function Web7Page() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 32px 100px' }}>
       <div className="anim-fade-in">
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '12px', padding: '16px 20px', marginBottom: '48px', border: `1px solid ${C.borderMid}`, background: 'rgba(22, 163, 116, 0.06)' }}>
+          <span style={{ fontFamily: F.body, fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: C.emeraldBright }}>Brand update</span>
+          <span style={{ fontFamily: F.body, fontSize: '13px', color: C.mutedLight, lineHeight: 1.6 }}>Web4 is now Web7. The name has changed; our focus on practical systems, technology and business growth continues.</span>
+        </div>
         <SectionLabel>Web7 · Formerly Web4</SectionLabel>
         <div style={{ display: 'grid', gap: '80px', marginBottom: '100px' }} className="md:grid-cols-2">
           <div>
@@ -1625,7 +1629,7 @@ function Web4Page() {
             What We Build
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {WEB4_SERVICES.map((service, i) => (
+            {WEB7_SERVICES.map((service, i) => (
               <div
                 key={service.title}
                 style={{
@@ -1634,7 +1638,7 @@ function Web4Page() {
                   borderTop: `1px solid ${C.border}`,
                   gap: '40px',
                   alignItems: 'start',
-                  ...(i === WEB4_SERVICES.length - 1 ? { borderBottom: `1px solid ${C.border}` } : {}),
+                  ...(i === WEB7_SERVICES.length - 1 ? { borderBottom: `1px solid ${C.border}` } : {}),
                 }}
                 className="md:grid-cols-[240px_1fr]"
               >
@@ -1875,7 +1879,7 @@ export default function App({ initialPage = 'home' }: { initialPage?: Page }) {
     case 'writing': return <WritingPage setPage={navigateToPage} />
     case 'projects': return <ProjectsPage setPage={navigateToPage} />
     case 'resources': return <ResourcesPage />
-    case 'web4': return <Web4Page />
+    case 'web4': return <Web7Page />
     case 'principles': return <PrinciplesPage />
     case 'now': return <NowPage />
     case 'marketing-systems': return <WhyMarketingArticle />
